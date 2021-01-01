@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/micromodal.min.js"></script>
 </head>
 <body>
     <!-------------------header---------------------->
@@ -24,11 +25,69 @@
         </a>
     </header>
     <!-----------------popup-menu------------------------>
-    <section>
-        
-    </section>
-
-    
-    
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <div class="modal__header">
+                    <h2 class="modal__ttl-logo" id="modal-1-title">
+                        <a href=""><img src="img/logo-w.svg" alt="KOKYO DESIGN こきょうデザイン"></a>
+                    </h2>
+                    <div class="modal__close" aria-label="Close modal" data-micromodal-close><img src="img/close_btn-w.svg" alt="閉じるボタン"></div>
+                </div><!--/.modal__header-->
+                <div class="modal__content" id="modal-1-content">
+                    <nav class="popup__nav">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Top</p>
+                                    <p class="linl__ttl--sub">トップ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Messege</p>
+                                    <p class="linl__ttl--sub">メッセージ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Survice</p>
+                                    <p class="linl__ttl--sub">サービス</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Works</p>
+                                    <p class="linl__ttl--sub">実績</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Price</p>
+                                    <p class="linl__ttl--sub">価格</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Profile</p>
+                                    <p class="linl__ttl--sub">プロフィール</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="link__ttl">Contact</p>
+                                    <p class="linl__ttl--sub">お問い合わせ</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav><!--/.popup__nav-->
+                </div><!--/.modal__content-->
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary">Continue</button>
+                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                </footer>
+            </div><!--/.modal__container-->
+        </div><!--/.modal__overlay-->
+    </div><!--/.modal micromodal-slide-->
 </body>
 </html>
