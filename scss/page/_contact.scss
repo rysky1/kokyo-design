@@ -1,0 +1,150 @@
+/*Contact Form 7カスタマイズ*/
+/*スマホContact Form 7カスタマイズ*/
+main.contactform{
+    position: relative;
+    padding: 150px 15px 0;
+    @include lg{
+        padding: 135px 15px 0;
+    }
+    @include xs{
+        padding: 135px 10px 0;
+    }
+    .contactform__ttl{
+        font-size: 35px;
+        letter-spacing: 10px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 5px;
+        @include sm{
+            font-size: 30px;
+        }
+    }
+    .contactform__sub-ttl{
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .contactform__txt01{
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 70px;
+        line-height: 1.7;
+        @include md{
+            margin-bottom: 50px;
+        }
+        @include sm{
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+    form{
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto 30px;
+        @include xl{
+            padding: 0;
+        }
+    }
+    .inquiry{
+        width: 100%;
+        margin-bottom: 50px;
+        @include sm{
+            margin-bottom: 35px;
+        }
+    }
+    .inquiry tr{
+        width: 100%;
+        display: block;
+        padding: 15px 0;
+        @include md{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    /*見出し欄*/
+    .inquiry th{
+        font-weight: normal;
+        color: #1a1a1a;;
+        padding-right:5px;
+        vertical-align: middle;
+        min-width:300px;
+        @include md{
+            margin-bottom: 15px;
+        }
+        @include xs{
+            min-width: 0;
+            font-size: 14px;
+        }
+        .haveto{
+            padding:5px;
+            background: $color-sub;
+            color:#fff;
+            border-radius: 3px;
+            margin-right:15px;
+            @include xs{
+                padding: 3px;
+                margin-right: 5px;
+            }
+            &--02{
+                background-color: #858585;
+            }
+        }
+    }
+    .inquiry td{
+        width: 100%;
+        padding: 5px 0;
+        input,textarea{
+            display: block;
+            width: 100%;
+            border: 1px solid #cecece;
+            padding: 10px;
+            border-radius: 3px;
+            @include sm{
+                padding: 5px;
+            }
+        }
+        textarea{
+            min-height: 250px;
+        }
+        input::placeholder {
+            color: #999999;
+        }
+        textarea::placeholder {
+            color: #999999;
+        }
+    }
+    /*送信ボタンのデザイン変更*/
+    .contactform__submit-btn{
+        display: block;
+        min-width: 200px;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        background-color: $color-main;
+        transition: .3s;
+        border: none;
+        &:hover{
+            @include d-s__hover;
+        }
+        &:hover{
+            transform: translate3d(0, 2px, 0);
+        }
+    }
+        //パンくず
+    .breadcrumb{
+        max-width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: 0 auto 0;
+        @include xl{
+            padding-right: 0;
+            padding-left: 0;
+            }
+    }
+}

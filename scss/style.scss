@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*!
+Theme Name: BRIGHTLINK
+Author:fines
+Description:ブライトリンク様
+Version:1.2
+*/
+
+//mixin
+@import "mixin/mixin";
+
+//setting
+@import "setting/font";
+@import "setting/color";
+// @import "setting/size";
+
+//reset
+@import "reset/reset";
+//@import "base/base";
+
+//module
+@import "module/header";
+@import "module/footer";
+//@import "module/sidebar";
+
+//page
+@import "page/common";
+@import "page/home";
+@import "page/single";
+@import "page/page";
+@import "page/capsultoy";
+@import "page/contact";
+@import "page/question";

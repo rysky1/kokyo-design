@@ -1,0 +1,485 @@
+.mv{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 380px;
+    margin-top: 80px;
+    z-index: 30;
+    @include lg{
+        margin-top: 65px;
+    }
+    //mv背景
+    &--capsultoy{
+        background-image: url(../img/pdage-capsultoy-mv.png);
+        background-size: cover;
+        background-position: 50% 20%;
+    }
+    .mv-ttl{
+        min-width: 50%;
+        font-size: 45px;
+        font-weight: bold;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: calc(50vw - 600px);
+        background: linear-gradient(to right,rgba(255,255,255,0.8),rgba(255,255,255,0));
+        @include xl{
+            padding-left: 15px;
+        }
+    }
+}
+//popup
+.popup__modal{
+    display: none;
+}
+.popup__modal.is-open{
+    display: block;
+}
+.popup{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 500;
+    .popup__contents{
+        max-width: 800px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        overflow-y: auto;
+        background-color: #fff;
+        z-index: 30;
+        padding: 0 25px 80px;
+        @include sm{
+            padding:50px 20px;
+        }
+        .modal-close-area{
+            position: absolute;
+            top:25px;
+            right:25px;
+            margin:0;
+            cursor: pointer;
+            .modal-close{
+                background-color: transparent;
+                outline: none;
+                border: none;
+                transition: all .3s ease;
+                &::before{
+                    content: "\2715";
+                    font-size: 25px;
+                    font-weight: 900;
+                }
+                &:hover{
+                    background-color: #333;
+                    color: #fff;
+                    border-radius: 3px;
+                }
+            }
+        }
+        .popup__contents__inner{
+            margin: 0 auto;
+            img{
+                display: block;
+                max-width: 300px;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                object-position: top center;
+            }
+            .wp-post-image{
+                display: block;
+                width: 100%;
+                margin: 65px auto;
+                height: auto;
+                object-fit: cover;
+            }
+            table{
+                tr{
+                    &:last-child{
+                        border-bottom: 1px solid #cecece;
+                    }
+                }
+                td{
+                    padding: 15px 15px;
+                    border-top: 1px solid #cecece;
+                    border-left: 1px solid #cecece;
+                    &:nth-child(odd){
+                        font-weight: bold;
+                    }
+                    &:nth-child(even){
+                        border-right: 1px solid #cecece;
+                        @include sm{
+                            font-size: 14px;
+                        }
+                    }
+                    @include sm{
+                        padding: 10px 5px;
+                    }
+                }
+            }
+        }
+        .popup__contact-btn{
+            width: 200px;
+            padding: 15px 0;
+            margin: 0 auto;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            align-items: center;
+            background-color: $color-main;
+            transition: .3s;
+            &:hover{
+                @include d-s__hover;
+            }
+            .btn__inner-txt{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+}
+//modal animation
+.micromodal-slide {
+	&[aria-hidden="false"] {
+		.modal-overlay {
+			animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+		}
+		.modal-container {
+			animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+	&[aria-hidden="true"] {
+		.modal-overlay {
+			animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+		}
+		.modal-container {
+			animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+	.modal-container,
+	.modal-overlay {
+		will-change: transform;
+	}
+}
+/**************************\
+	Animation Style
+\**************************/
+@keyframes mmfadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes mmfadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes mmslideIn {
+	from {
+		transform: translateY(8%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+@keyframes mmslideOut {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-8%);
+	}
+}
+
+.capsultoy{
+    position: relative;
+    width: 100%;
+    padding-top: 80px;
+    background-color: rgba(243,130,0,0.5);
+    background-image: url(../img/bg-circle.png);
+    background-position: center 55%;
+    background-size: 240px 270px;
+    background-repeat: repeat;
+    z-index: 20;
+    overflow: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: 85px;
+        width: 740px;
+        height: 635px;
+        transform: rotate(85deg);
+        background-image: url(../img/denkyu-b.svg);
+        background-position: top center;
+        background-size: 85%;
+        background-repeat: no-repeat;
+        z-index: -10;
+        @include md{
+            width: 450px;
+            height: 400px;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -160px;
+        left: -80px;
+        width: 740px;
+        height: 635px;
+        transform: rotate(7deg);
+        background-image: url(../img/denkyu-b.svg);
+        background-position: top center;
+        background-size: 85%;
+        background-repeat: no-repeat;
+        z-index: -10;
+        @include md{
+            width: 450px;
+            height: 400px;
+        }
+    }
+    .capsultoy__ttl{
+        text-align: center;
+        margin-bottom: 70px;
+        .main-ttl{
+            color: #432F17;
+            font-size: 75px;
+            font-weight: bold;
+            @include sm{
+                font-size: 60px;
+            }
+        }
+        .sub-ttl{
+            color: #432F17;
+        }
+    }
+    .capsultoy-items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        z-index: 10;
+        margin-bottom: 30px;
+        @include sm{
+            justify-content: center;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        @include xs{
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .item-box{
+            position: relative;
+            width: 270px;
+            height: 340px;
+            margin-right: 30px;
+            margin-bottom: 50px;
+            padding-top: 15px;
+            background-color: #FFF3E5;
+            z-index: 10;
+            cursor: pointer;
+            @include xl{
+                width: calc(33.3% - 15px);
+                margin-right: 22.5px;
+            }
+            @include md{
+                width: calc(50% - 10px);
+                margin-right: 20px;
+            }
+            @include sm{
+                width: 100%;
+                margin-right: 0;
+            }
+            &:nth-of-type(4n){
+                margin-right: 0;
+                @include xl{
+                    margin-right: 22.5px;
+                }
+                @include md{
+                    margin-right: 20px;
+                }
+                @include sm{
+                    margin-right: 0;
+                }
+            }
+            &:nth-of-type(3n){
+                @include xl{
+                    margin-right: 0;
+                }
+                @include md{
+                    margin-right: 20px;
+                }
+                @include sm{
+                    margin-right: 0;
+                }
+            }
+            &:nth-of-type(2n){
+                @include md{
+                    margin-right: 0;
+                }
+            }
+            .new__icon{
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                font-size: 17px;
+                font-weight: bold;
+                padding: 20px 10px;
+                color: #fff;
+                transform: rotate(-25deg);
+                text-align: center;
+                background-color: #E83828;
+            }
+            .image-area{
+                width: 240px;
+                height: 270px;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                margin-left: 15px;
+                @include xl{
+                    width: auto;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center top;
+                }
+            }
+            .detail__btn{
+                display: flex;
+                justify-content: center;
+                padding: 2.5px 0;
+                margin: 0 5px;
+                background-color: #AB885F;
+                border-radius: 0 0 7px 7px;
+                transition: .2s;
+                .btn-txt{
+                    color: #fff;
+                    margin-right: 5px;
+                }
+                .icon{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &:hover{
+                .detail__btn{
+                    background-color: $color-main;
+                }
+            }
+        }
+    }
+    //wysiwyg-editor調整
+    .wysiwyg-editor{
+        max-width: 1200px;
+        background-color: rgba(255,255,255,0.75);
+        border-radius: 5px;
+        padding: 35px;
+        @include xl{
+            padding: 25px;
+        }
+        @include sm{
+            padding: 15px;
+        }
+        h2{
+            margin-top: 0;
+        }
+        a{
+            display: inline-block;
+            color: #007bff;
+        }
+    }
+    //ページネーション
+    .pagination{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .page__num{
+            display: none;
+        }
+        .current{
+            display: block;
+            min-width: 50px;
+            min-height: 50px;
+            padding: 17px;
+            margin: 0 10px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: #5B3C18;
+            text-align: center;
+            @include md{
+                margin-bottom: 5px;
+            }
+        }
+        .inactive{
+            display: block;
+            min-width: 50px;
+            min-height: 50px;
+            padding: 17px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #1a1a1a;
+            text-align: center;
+            transition: 0.2s;
+            @include md{
+                margin-bottom: 5px;
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        .top{
+            display: block;
+            padding: 17px 5px;
+        }
+        .back{
+            display: block;
+            padding: 17px;
+        }
+        .next{
+            display: block;
+            padding: 17px;
+        }
+        .last{
+            display: block;
+            padding: 17px 5px;
+        }
+    }
+    //パンくず capsultoy用
+    .breadcrumb{
+        li{
+            &::after{
+                border-top: 1.5px solid #5d3f1d;
+                border-right: 1.5px solid #5d3f1d;
+            }
+            a{
+                color: #5d3f1d;
+                .home__btn{
+                    position: relative;
+                    &::before{
+                        background-image: url(../img/home-icon.svg);
+                    }
+                }
+            }
+        }
+    }
+}

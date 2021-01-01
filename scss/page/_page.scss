@@ -1,0 +1,227 @@
+//page.php
+.page-articles{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    background-color: #ebebeb;
+    @include lg{
+        margin-top: 65px;
+    }
+    .article__ttl-area{
+        display: flex;
+        align-items: center;
+        padding-top: 70px;
+        padding-bottom: 83.5px;
+        @include sm{
+            flex-direction: column;
+        }
+        .article__main-ttl{
+            position: relative;
+            @include sm{
+                margin-bottom: 20px;
+            }
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -13.5px;
+                width: 60px;
+                height: 3.5px;
+                z-index: 100;
+                background-color: $color-sub;
+                @include sm{
+                    margin: auto;
+                    right: 0;
+                    left: 60px;
+                }
+            }
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 60px;
+                bottom: -13.5px;
+                width: 60px;
+                height: 3.5px;
+                z-index: 100;
+                background-color: $color-main;
+                @include sm{
+                    margin: auto;
+                    right: 60px;
+                    left: 0;
+                }
+            }
+            .ttl{
+                display: block;
+                font-size: 45px;
+                font-weight: 700;
+            }
+        }
+        .article__sub-ttl{
+            padding-top: 10px;
+            @include sm{
+                padding-top: 0;
+            }
+            .ttl{
+                position: relative;
+                font-size: 25px;
+                color: #3e3e3e;
+                margin-left: 50px;
+                @include sm{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .article-lists{
+        margin-bottom: 30px;
+        .box{
+            width: 100%;
+            display: flex;
+            padding: 20px 0;
+            margin: 0 auto;
+            @include sm{
+                flex-direction: column;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+                .ttl-link{
+                    color: $color-main;
+                }
+            }
+        }
+        .image-area{
+            width: 30%;
+            max-height: 220px;
+            overflow: hidden;
+            @include sm{
+                width: 100%;
+            }
+            img{
+                transition: .3s;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .detail{
+            width: 70%;
+            max-height: 220px;
+            padding: 35px 45px;
+            background-color: #fff;
+            @include lg{
+                padding: 25px 20px;
+            }
+            @include sm{
+                width: 100%;
+                padding: 25px;
+            }
+            .excerpt{
+                line-height: 1.5;
+                @include lg{
+                    font-size: 14px;
+                }
+                @include md{
+                    display: none;
+                }
+            }
+        }
+        .list{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            .post-date{
+                font-size: 14px;
+                color: #909090;
+                letter-spacing: 0.05rem;
+                margin-right: 20px;
+            }
+            .category{
+                .link{
+                    display: block;
+                    font-size: 13px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: $color-main;
+                    padding: 3px 10px;
+                    border: 1px solid $color-main;
+                    border-radius: 5px;
+                    transition: .3s;
+                    &:hover{
+                        background-color: $color-main;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .ttl{
+            margin-bottom: 15px;
+            &-link{
+                display: block;
+                font-size: 28px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #1a1a1a;
+                transition: .3s;
+                @include md{
+                    font-size: 22px;
+                }
+                @include sm{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    //ページネーション
+    .pagination{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        .page__num{
+            display: none;
+        }
+        .current{
+            display: block;
+            padding: 15px;
+            margin: 0 7px;
+            border: 1px solid #cdcdcd;
+            color: #fff;
+            background-color: $color-main;
+            text-align: center;
+            @include md{
+                margin-bottom: 5px;
+            }
+        }
+        .inactive{
+            display: block;
+            padding: 15px;
+        margin: 0 7px;
+            border: 1px solid #cdcdcd;
+            color: #1a1a1a;
+            text-align: center;
+            @include md{
+                margin-bottom: 5px;
+            }
+        }
+        .top{
+            display: block;
+            padding: 15px 5px;
+        }
+        .back{
+            display: block;
+            padding: 15px;
+        }
+        .next{
+            display: block;
+            padding: 15px;
+        }
+        .last{
+            display: block;
+            padding: 15px 5px;
+        }
+    }
+}

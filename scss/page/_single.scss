@@ -1,0 +1,142 @@
+//single
+main.single{
+    position: relative;
+    margin-top: 80px;
+    padding: 0 15px;
+    @include lg{
+        margin-top: 65px;
+    }
+    h1{
+        font-size: 45px;
+        padding: 35px 0;
+        text-align: center;
+        font-weight: bold;
+    }
+    .ttl-area{
+        max-width: 1000px;
+        padding: 70px 0 0;
+        margin: 0 auto;
+        .detail__box{
+            display: flex;
+            .category{
+                a{
+                    display: block;
+                    color: #fff;
+                    padding: 5px 15px;
+                    background-color: $color-main;
+                    border-radius: 5px;
+                    text-align: center;
+                    &:hover{
+                        text-decoration: none;
+                        opacity: 0.5;
+                    }
+                }
+            }
+            .time{
+                display: block;
+                line-height: 1.5;
+                margin-left: 20px;
+                color: #909090;
+            }
+        }
+        h1{
+            text-align: left;
+            @include sm{
+                font-size: 30px;
+            }
+        }
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    //パンくず
+    .breadcrumb{
+        max-width: 1000px;
+        margin: 0 auto;
+        }
+}
+.wysiwyg-editor{
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    @include md{
+        margin-bottom: 50px;
+    }
+    h1{
+        font-size: 45px;
+        line-height: 1.5;
+        font-weight: bold;
+        margin: 35px 0;
+    }
+    h2{
+        font-size: 35px;
+        line-height: 1.7;
+        font-weight: bold;
+        margin-top: 35px;
+        }
+    h3{
+        font-size: 25px;
+        line-height: 1.7;
+        font-weight: bold;
+        margin-top: 35px;
+    }
+    h4{
+        font-size: 20px;
+        line-height: 1.7;
+        font-weight: bold;
+        margin-top: 35px;
+    }
+    h5{
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: bold;
+        margin-top: 35px;
+    }
+    h6{
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+    p{
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+    a{
+        display: block;
+        padding: 10px 0;
+        line-height: 1.5;
+        word-wrap:break-word;
+        color: #1a0dab;
+    }
+    .wp-block-columns{
+        margin: 0;
+        margin-top: 25px;
+        align-items: center;
+        .wp-block-column{
+            h3{
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+            p{
+                line-height: 2;
+                margin: 0;
+            }
+        }
+        img{
+            display: block;
+            object-fit: cover;
+        }
+    }
+    figure{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        img{
+            display: block;
+            object-fit: contain;
+        }
+    }
+}
