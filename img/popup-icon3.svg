@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25">
+  <g id="コメントアイコン7" transform="translate(-6.063 -58.603)">
+    <g id="シンプルな書類ファイル" transform="translate(-47.755 58.603)">
+      <rect id="長方形_15" data-name="長方形 15" width="11.165" height="1.095" transform="translate(58.236 19.223)" fill="#5d5d5d"/>
+      <rect id="長方形_16" data-name="長方形 16" width="11.165" height="1.095" transform="translate(58.236 14.907)" fill="#5d5d5d"/>
+      <rect id="長方形_17" data-name="長方形 17" width="11.165" height="1.096" transform="translate(58.236 10.592)" fill="#5d5d5d"/>
+      <rect id="長方形_18" data-name="長方形 18" width="5.404" height="1.095" transform="translate(64.086 6.278)" fill="#5d5d5d"/>
+      <path id="パス_55" data-name="パス 55" d="M71.515,0H62.174a2.547,2.547,0,0,0-1.788.731L54.559,6.484a2.48,2.48,0,0,0-.741,1.765V22.727A2.291,2.291,0,0,0,56.121,25H71.515a2.291,2.291,0,0,0,2.3-2.273V2.273A2.29,2.29,0,0,0,71.515,0ZM61.357,1.58V6.69c0,.552-.218.768-.777.768H55.4ZM72.523,22.727a1,1,0,0,1-1.008.995H56.121a1,1,0,0,1-1.008-.995V8.594h6.161a1.229,1.229,0,0,0,1.235-1.22v-6.1h9.007a1,1,0,0,1,1.008.994V22.727Z" transform="translate(0)" fill="#5d5d5d"/>
+    </g>
+  </g>
+</svg>

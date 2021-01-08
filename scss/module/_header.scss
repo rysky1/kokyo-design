@@ -1,224 +1,36 @@
 .header{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #fff;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    z-index: 200;
-    @include lg{
-        height: 65px;
-    }
-    .logo{
-        margin-left: 20px;
-        &__area{
-            display: block;
-            width: 310px;
-            height: 40px;
-            @include xl{
-                width: 200px;
-                height: auto;
-            }
+    width: 100%;
+    height: 135px;
+    height: 135px;
+    .logo__area{
+        margin-left: 30px;
+        .logo{
+            width: 105px;
+            height: 75px;
             .logo__img{
-                display: block;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                transition: .3s;
-            }
-            &:hover{
-                .logo__img{
-                    opacity: 0.5;
-                }
             }
         }
     }
-    &-nav{
-        margin-left: auto;
-        margin-right: 15px;
-        height: 37px;
-        overflow: hidden;
-        @include lg{
-            display: none;
-        }
-        &__list{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            li{
-                a{
-                    display: inline-block;
-                    position: relative;
-                    font-size: 14px;
-                    color: #1a1a1a;
-                    text-decoration: none;
-                    padding: 15px;
-                    width: 100%;
-                    height: 100%;
-                    @include xl{
-                        font-size: 13px;
-                        padding: 12px;
-                    }
-                    &::after{
-                        position: absolute;
-                        content: "";
-                        width: 80%;
-                        height: 2px;
-                        background-color: #333;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        bottom: 15px;
-                        display: block;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: .3s;
-                    }
-                    &:hover{
-                        &::after{
-                            bottom: 8px;
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .header-nav__contact-btn{
-        width: 165px;
-        padding: 10px 0;
-        margin-right: 20px;
-        text-decoration: none;
-        color: #fff;
-        text-align: center;
+    .contact__btn{
+        display: flex;
         align-items: center;
-        background-color: $color-main;
-        transition: .3s;
-        &:hover{
-            @include d-s__hover;
-        }
-        @include lg{
-            display: none;
-        }
-        &:hover{
-            transform: translate3d(0, 2px, 0);
-        }
-        .mail-icon{
-            display: inline-block;
-            &__svg{
-                display: inline-block;
-                width: 16px;
-                height: 14px;
-                margin-right: 10px;
-            }
-        }
-        .btn__inner-txt{
-            display: inline-block;
-            font-size: 14px;
-            font-weight: bold;
-            color: #fff;
-        }
-    }
-}
-//hiraku.js　ハンバーガーメニュー
-.rpnav-btn{
-    display: none;
-    margin-right: 20px;
-    margin-left: auto;
-    padding: 5px 10px 10px 10px;
-    border: none;
-    background: #fff;
-    &:focus{
-        outline: none;
-    }
-    @include lg{
-        display: block;
-    }
-}
-.rpnav-btn__line{
-    background-color: #1a1a1a;
-    width: 20px;
-    &::before{
-        width: 115%;
-        background-color: $color-sub;
-        top: -7px;
-    }
-    &::after{
-        width: 85%;
-        background-color: $color-main;
-        bottom: -7px;
-    }
-}
-[aria-expanded='true'] .rpnav-btn__line:before {
-    -ms-transform: translate(-2px, 7px) rotate(45deg);
-    transform: translate(-2px, 7px) rotate(45deg);
-}
-
-[aria-expanded='true'] .rpnav-btn__line:after {
-    -ms-transform: translate(-2px, -7px) rotate(-45deg);
-    transform: translate(-2px, -7px) rotate(-45deg);
-}
-.offcanvas-right{
-    .header-rpnav__list{
-        width: 100%;
-        li{
-            a{
-                position: relative;
-                color: $color-main;
-                display: block;
-                padding: 20px;
+        margin-right: 125px;
+        .icon__area{
+            width: 25px;
+            height: 20px;
+            margin-right: 10px;
+            .icon__img{
                 width: 100%;
-                border-bottom: 1px solid #e5e5e5;
-                &::after{
-                    position: absolute;
-                    top: 50%;
-                    right: 20px;
-                    content: "";
-                    width: 8px;
-                    height: 8px;
-                    border-top: 2px solid $color-main;
-                    border-right: 2px solid $color-main;
-                    transform: translateY(-50%) rotate(45deg);
-                }
+                height: 100%;
             }
         }
-    }
-    .rpnav__contact-btn{
-        width: auto;
-        padding: 14px 0;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-left: 20px;
-        text-decoration: none;
-        color: #fff;
-        text-align: center;
-        align-items: center;
-        background-color: $color-main;
-        transition: .3s;
-        &:hover{
-            @include d-s__hover;
-        }
-        &:hover{
-            transform: translate3d(0, 2px, 0);
-        }
-        .mail-icon{
-            display: inline-block;
-            &__svg{
-                display: inline-block;
-                margin-right: 10px;
-                width: 16px;
-                height: 14px;
-            }
-        }
-        .btn__inner-txt{
-            display: inline-block;
+        .contact__txt{
             font-size: 14px;
-            font-weight: bold;
-            color: #fff;
         }
     }
-}
-.js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar-right {
-    background-color: #FFFAF3;
 }

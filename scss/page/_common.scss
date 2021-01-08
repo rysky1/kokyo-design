@@ -28,7 +28,7 @@ input, textarea{
     margin: 0 auto;
 }
 p{
-    color: $color-main__font
+    color: $color__main-font
 }
 ul{
     list-style: none;
@@ -37,9 +37,12 @@ ul{
 }
 a{
     display: block;
-    color: $color-main__font;
+    color: $color__main-font;
     cursor: pointer;
     text-decoration: none;
+}
+img{
+    display: block;
 }
 //パンくず
 .breadcrumb{
