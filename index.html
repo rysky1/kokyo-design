@@ -28,55 +28,55 @@
     <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <div class="modal__header">
-                    <h2 class="modal__ttl-logo" id="modal-1-title">
-                        <a href=""><img src="img/logo-w.svg" alt="KOKYO DESIGN こきょうデザイン"></a>
-                    </h2>
-                    <div class="modal__close" aria-label="Close modal" data-micromodal-close><img src="img/close_btn-w.svg" alt="閉じるボタン"></div>
-                </div><!--/.modal__header-->
                 <div class="modal__content" id="modal-1-content">
+                    <h2 class="modal__ttl-logo logo__area" id="modal-1-title">
+                        <a href="#" class="logo">
+                            <img src="img/logo-w.svg" alt="KOKYO DESIGN こきょうデザイン" class="logo__img">
+                        </a>
+                    </h2>
+                    <div class="modal__close" aria-label="Close modal" data-micromodal-close></div>
                     <nav class="popup__nav">
                         <ul>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Top</p>
-                                    <p class="linl__ttl--sub">トップ</p>
+                                    <p class="link__sub-ttl">トップ</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Messege</p>
-                                    <p class="linl__ttl--sub">メッセージ</p>
+                                    <p class="link__sub-ttl">メッセージ</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Survice</p>
-                                    <p class="linl__ttl--sub">サービス</p>
+                                    <p class="link__sub-ttl">サービス</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Works</p>
-                                    <p class="linl__ttl--sub">実績</p>
+                                    <p class="link__sub-ttl">実績</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Price</p>
-                                    <p class="linl__ttl--sub">価格</p>
+                                    <p class="link__sub-ttl">価格</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Contact</p>
-                                    <p class="linl__ttl--sub">プロフィール</p>
+                                    <p class="link__sub-ttl">プロフィール</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
                                     <p class="link__ttl">Contact</p>
-                                    <p class="linl__ttl--sub">お問い合わせ</p>
+                                    <p class="link__sub-ttl">お問い合わせ</p>
                                 </a>
                             </li>
                         </ul>
@@ -86,21 +86,21 @@
         </div><!--/.modal__overlay-->
     </div><!--/.modal micromodal-slide-->
     <!---------------------kv------------------------>
-    <canvas id="canvas_wave" width="2000" height="150"></canvas>
-    <section class="kv">
-        <div class="kv__wave"></div>
+    <section class="mv">
+        <canvas id="canvas_wave" width="2000" height="150" class="mv__wave"></canvas>
+        <video loop autoplay muted playsinline poster="img/mv-bg.png" src="img/mv__video.mov" class="mv__video"></video>
         <div class="container-fluid">
-            <h2 class="kv__ttl">人に寄り添う<br>デザインを</h2>
+            <h2 class="mv__ttl">人に寄り添う<br>デザインを</h2>
         </div>
     </section><!--/.kv-->
     <!---------------------messege------------------------>
     <section class="message">
         <div class="container-fluid">
-            <div class="message__contents">
+            <div class="message__container">
                 <div class="message__image-area">
                     <img src="img/message_img.jpeg" alt="青空">
                 </div>
-                <div class="message__detail">
+                <div class="message__contents">
                     <h2 class="section__ttl">
                         <span class="main__ttl">Message</span>
                         <span class="sub__ttl">メッセージ</span>
@@ -110,8 +110,8 @@
                         <p class="txt__01">デザイン･ホームページ制作にはさまざまな可能性がありますがお客さまの想い、課題に対して寄り添い、<strong class="st">価値のある</strong>デザインが重要だと考えています。価値を正確に伝える事。利用者様が使いやすく、目的を達成できることを重視した制作を心がけています。</p>
                         <p class="txt__02">KOKYO DESIGNの<strong class="st">KOKYO(故郷)</strong>は<strong class="st">”安心する場所”</strong>という思いを込めております。お客様が、安心していただけるよう丁寧で柔軟なサポートをしていきたいと考えています。</p>
                     </div><!--/.txt__area-->
-                </div><!--/.message__detail-->
-            </div><!--/.message__contents-->
+                </div><!--/.message__contents-->
+            </div><!--/.message__container -->
         </div><!--/.container-fluid-->
     </section>
     <!---------------------service------------------------>
@@ -417,43 +417,43 @@
                 <li>
                     <a href="">
                         <p class="link__ttl">Top</p>
-                        <p class="linl__ttl--sub">トップ</p>
+                        <p class="link__sub-ttl">トップ</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <p class="link__ttl">Messege</p>
-                        <p class="linl__ttl--sub">メッセージ</p>
+                        <p class="link__sub-ttl">メッセージ</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <p class="link__ttl">Survice</p>
-                        <p class="linl__ttl--sub">サービス</p>
+                        <p class="link__sub-ttl">サービス</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <p class="link__ttl">Works</p>
-                        <p class="linl__ttl--sub">実績</p>
+                        <p class="link__sub-ttl">実績</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <p class="link__ttl">Price</p>
-                        <p class="linl__ttl--sub">価格</p>
+                        <p class="link__sub-ttl">価格</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <p class="link__ttl">Contact</p>
-                        <p class="linl__ttl--sub">プロフィール</p>
+                        <p class="link__sub-ttl">プロフィール</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <p class="link__ttl">Contact</p>
-                        <p class="linl__ttl--sub">お問い合わせ</p>
+                        <p class="link__sub-ttl">お問い合わせ</p>
                     </a>
                 </li>
             </nav><!--/.footer__nav-->
@@ -461,6 +461,9 @@
         </div><!--/.container-fluid-->
     </footer>
 </body>
-<script src="js/swiper-bundle.min.js"></script>
+<script src="js/polyfill.js"></script>
+<script src="js/micromodal.min.js"></script>
 <script src="js/wave.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/javascript.js"></script>
 </html>

@@ -28,7 +28,8 @@ input, textarea{
     margin: 0 auto;
 }
 p{
-    color: $color__main-font
+    color: $color__main-font;
+    line-height: 1.7;
 }
 ul{
     list-style: none;
@@ -43,6 +44,24 @@ a{
 }
 img{
     display: block;
+}
+
+//ロゴ
+.logo__area{
+    .logo{
+        width: 105px;
+        height: 75px;
+        .logo__img{
+            width: 100%;
+            height: 100%;
+            transition: .3s;
+        }
+    }
+    :hover{
+        .logo__img{
+            opacity: 0.6;
+        }
+    }
 }
 //パンくず
 .breadcrumb{

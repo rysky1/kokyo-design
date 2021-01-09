@@ -16,3 +16,183 @@
         height: 23px;
     }
 }
+/*--------micromodal---------*/
+.modal__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba( 3, 30, 68,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal__container{
+    background-color: rgba( 3, 30, 68,0.85);
+    width: 100%;
+    max-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}  
+.modal__content {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: #fff;
+    .logo__area{
+        .logo{
+            margin: 0 auto;
+        }
+    }
+    .modal__close {
+        position: fixed;
+        top: 85px;
+        right: 40px;
+        width: 45px;
+        height: 45px;
+        background-image: url(../img/close_btn-w.svg);
+        background-color: transparent;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            opacity: 0.5;
+            @include sm{
+                opacity: 1;
+            }
+        }
+    }
+    .popup__nav{
+        max-width: 600px;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        li{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1.5px solid #050f1b;
+            box-shadow: 0 0.3px 0 rgba( 255, 255, 255, 0.3);
+            &:last-child{
+                border-bottom: none;
+                box-shadow: none;
+            }
+            a{
+                padding-right: 10px;
+                padding-left: 10px;
+                .link__ttl{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+                .link__sub-ttl{
+                    margin-top: 5px;
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: #fff;
+                }
+            }
+        }
+    }    
+}
+/**************************\
+    Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes mmslideIn {
+    from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+.micromodal-slide {
+    display: none;
+}
+.micromodal-slide.is-open {
+    display: block;
+}
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}
+/*--------mv---------*/
+.mv{
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background-image: url(../img/mv-bg.png);
+    background-position: top center;
+    background-size: cover;
+    .mv__wave{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transform: rotate(180deg);
+
+    }
+    .mv__video{
+        display: block;
+        min-width: 100%;
+        min-height: 768px;
+        height: 90vh;
+        object-fit: cover;
+    }
+    .container-fluid{
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        left: 120px;
+        .mv__ttl{
+            font-size: 45px;
+            line-height: 1.7;
+            font-weight: 700;
+            color: #FFF;
+        }
+    }
+}
+/*--------messege---------*/
+.message{
+    padding-top: 120px;
+    width: 100%;
+    .message__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .message__image-area{
+            width: 400px;
+            height: 500px;
+            margin-left: 100px;
+            margin-left: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

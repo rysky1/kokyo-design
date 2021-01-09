@@ -13,7 +13,7 @@ function demo_wave() {
   }
   function demo_draw() {
       demo_cntxt.clearRect(0, 0, demo_w, demo_h), //座標領域のクリア
-      demo_cntxt.fillStyle = "#ccc", //塗りの色
+      demo_cntxt.fillStyle = "#fff", //塗りの色
       demo_cntxt.globalAlpha = 1, //塗りの透明度
       demo_cntxt.beginPath(), //パスを開始
 
@@ -25,7 +25,7 @@ function demo_wave() {
       demo_cntxt.fill() //fillStyleの反映
 
       // カウントアップやら値のセット
-      demo_draw.seconds = demo_draw.seconds + 0.045, //波の流れの速さが変わる
+      demo_draw.seconds = demo_draw.seconds + 0.03, //波の流れの速さが変わる
       demo_draw.t = demo_draw.seconds * Math.PI, //円周率
 
       setTimeout(demo_draw, 70) //波のコマの長さms
