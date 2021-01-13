@@ -28,7 +28,7 @@
     align-items: center;
 }
 .modal__container{
-    background-color: rgba( 3, 30, 68,0.9);
+    background-color: rgba( 3, 30, 68,0.95);
     width: 100%;
     max-height: 100vh;
     padding-top: 70px;
@@ -384,19 +384,44 @@
             .price__inner{
                 margin-top: 70px;
                 .price__contents{
+                    width: 580px;
+                    margin-bottom: 35px;
                     .contents__ttl{
                         font-size: 25px;
                         font-weight: 600;
                     }
                     .contents__list{
+                        &:first-of-type{
+                            margin-top: 10px;
+                        }
                         display: flex;
+                        justify-content: space-between;
+                        padding-top: 10px;
                         padding-bottom: 10px;
                         border-bottom: 1px solid #dedede;
-                        &:first-child{
-                            margin-top: 35px;
-                        }
                         .list__ttl{
+                            color: #5d5d5d;
                             font-weight: 600;
+                        }
+                        .list__price{
+                            letter-spacing: 0.07rem;
+                        }
+                    }
+                }
+                .price__attention{
+                    display: flex;
+                    .attention__mark{
+                        margin-right: 15px;
+                        font-size: 14px;
+                    }
+                    .attention__contents{
+                        .txt01{
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                            color: #5d5d5d;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
                         }
                     }
                 }

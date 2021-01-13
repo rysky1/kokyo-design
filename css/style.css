@@ -222,6 +222,44 @@ img {
   color: #777;
 }
 
+.more__btn {
+  position: relative;
+}
+.more__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  border-bottom: 1px solid #2E80CB;
+  transition: 0.2s ease-in;
+}
+.more__btn::after {
+  content: "";
+  position: absolute;
+  left: 23px;
+  bottom: 2px;
+  width: 17px;
+  border-bottom: 1px solid #2E80CB;
+  transform: rotate(10deg);
+  transition: 0.2s ease-in;
+}
+.more__btn .btn__txt {
+  line-height: 1;
+  padding-left: 55px;
+  color: #2E80CB;
+  font-weight: 600;
+}
+.more__btn:hover::before {
+  width: 50px;
+}
+.more__btn:hover::after {
+  left: 33px;
+}
+.more__btn:hover .btn__txt {
+  color: #61a4e2;
+}
+
 .breadcrumb {
   padding: 25px 0;
   margin-bottom: 0;
@@ -299,7 +337,7 @@ img {
 }
 
 .modal__container {
-  background-color: rgba(3, 30, 68, 0.9);
+  background-color: rgba(3, 30, 68, 0.95);
   width: 100%;
   max-height: 100vh;
   padding-top: 70px;
@@ -678,20 +716,45 @@ img {
 .price .price__detail .price__container .price__inner {
   margin-top: 70px;
 }
+.price .price__detail .price__container .price__inner .price__contents {
+  width: 580px;
+  margin-bottom: 35px;
+}
 .price .price__detail .price__container .price__inner .price__contents .contents__ttl {
   font-size: 25px;
   font-weight: 600;
 }
 .price .price__detail .price__container .price__inner .price__contents .contents__list {
   display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #dedede;
 }
-.price .price__detail .price__container .price__inner .price__contents .contents__list:first-child {
-  margin-top: 35px;
+.price .price__detail .price__container .price__inner .price__contents .contents__list:first-of-type {
+  margin-top: 10px;
 }
 .price .price__detail .price__container .price__inner .price__contents .contents__list .list__ttl {
+  color: #5d5d5d;
   font-weight: 600;
+}
+.price .price__detail .price__container .price__inner .price__contents .contents__list .list__price {
+  letter-spacing: 0.07rem;
+}
+.price .price__detail .price__container .price__inner .price__attention {
+  display: flex;
+}
+.price .price__detail .price__container .price__inner .price__attention .attention__mark {
+  margin-right: 15px;
+  font-size: 14px;
+}
+.price .price__detail .price__container .price__inner .price__attention .attention__contents .txt01 {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #5d5d5d;
+}
+.price .price__detail .price__container .price__inner .price__attention .attention__contents .txt01:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

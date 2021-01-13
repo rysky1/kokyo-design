@@ -75,6 +75,47 @@ img{
         color: #777;
     }
 }
+//more__btn
+.more__btn{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        border-bottom: 1px solid $color__main;
+        transition: 0.2s ease-in;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 23px;
+        bottom: 2px;
+        width: 17px;
+        border-bottom: 1px solid #2E80CB;
+        transform: rotate(10deg);
+        transition: 0.2s ease-in;
+    }
+    .btn__txt{
+        line-height: 1;
+        padding-left: 55px;
+        color: $color__main;
+        font-weight: 600;
+    }
+    &:hover{
+        &::before{
+            width: 50px;
+        }
+        &::after{
+            left: 33px;
+        }
+        .btn__txt{
+            color: #61a4e2;
+        }
+    }
+}
+
 //パンくず
 .breadcrumb{
     padding: 25px 0;
