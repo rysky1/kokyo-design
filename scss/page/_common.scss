@@ -63,6 +63,18 @@ img{
         }
     }
 }
+//セクション タイトル
+.section__ttl{
+    .main__ttl{
+        display: block;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .sub__ttl{
+        display: block;
+        color: #777;
+    }
+}
 //パンくず
 .breadcrumb{
     padding: 25px 0;

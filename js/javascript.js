@@ -17,7 +17,7 @@ var swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     speed: 600,
-    spaceBetween: 35,
+    spaceBetween: 30,
     navigation:{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -37,7 +37,7 @@ var swiper = new Swiper('.swiper-container', {
         },//window width is >= 767px
         991: {
         slidesPerView: 3,
-        spaceBetween: 35
+        spaceBetween: 30    
         }//window width is >= 991px
     }
 });

@@ -212,6 +212,16 @@ img {
   opacity: 0.6;
 }
 
+.section__ttl .main__ttl {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+}
+.section__ttl .sub__ttl {
+  display: block;
+  color: #777;
+}
+
 .breadcrumb {
   padding: 25px 0;
   margin-bottom: 0;
@@ -283,14 +293,13 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(3, 30, 68, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal__container {
-  background-color: rgba(3, 30, 68, 0.85);
+  background-color: rgba(3, 30, 68, 0.9);
   width: 100%;
   max-height: 100vh;
   padding-top: 70px;
@@ -464,23 +473,225 @@ img {
 
 /*--------messege---------*/
 .message {
-  padding-top: 120px;
+  padding-top: 220px;
   width: 100%;
 }
 .message .message__container {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: #e5f3ff;
+}
+.message .message__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1*(50vw - 600px));
+  width: calc(50vw - 600px);
+  height: 100%;
+  background-color: #e5f3ff;
 }
 .message .message__container .message__image-area {
   width: 400px;
   height: 500px;
-  margin-left: 100px;
+  margin-top: -100px;
+  margin-right: 100px;
   margin-left: auto;
 }
 .message .message__container .message__image-area img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: 80% top;
+}
+.message .message__container .message__contents {
+  width: 50%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.message .message__container .message__contents .txt__area {
+  max-width: 500px;
+}
+.message .message__container .message__contents .txt__area .ttl {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.message .message__container .message__contents .txt__area .txt {
+  margin-top: 15px;
+}
+.message .message__container .message__contents .txt__area .txt .st {
+  font-weight: 500;
+  color: #2E80CB;
+}
+.message .message__container .message__contents .txt__area .txt--02 {
+  margin-top: 27px;
+}
+
+/*--------service---------*/
+.service {
+  padding-top: 120px;
+}
+.service .container-fluid {
+  padding: 0;
+}
+.service .section__ttl {
+  text-align: center;
+}
+.service .service__container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service .service__container .service__contents {
+  padding-right: 40px;
+  padding-left: 40px;
+  border-left: 1px solid #dedede;
+}
+.service .service__container .service__contents:nth-child(3n) {
+  border-right: 1px solid #dedede;
+}
+.service .service__container .service__contents:nth-child(n+4) {
+  margin-top: 70px;
+}
+.service .service__container .service__contents .contents__icon {
+  max-width: 125px;
+  height: 85px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.service .service__container .service__contents .contents__icon .icon__img {
+  width: 100%;
+  height: 100%;
+}
+.service .service__container .service__contents .contents__ttl {
+  margin-top: 35px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #5d5d5d;
+  text-align: center;
+}
+.service .service__container .service__contents .contents__txt {
+  width: calc(320px - 2px);
+  min-height: 110px;
+  margin-top: 15px;
+  color: #5d5d5d;
+}
+
+/*--------works---------*/
+.works {
+  padding-top: 300px;
+}
+.works .section__ttl {
+  position: relative;
+}
+.works .section__ttl::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(-1*(50vw - 600px));
+  transform: translateY(-50%);
+  width: calc(650px + (50vw - 600px));
+  height: 350px;
+  background: linear-gradient(to right, #B5DBFF, #F7FBFF);
+  z-index: -10;
+}
+.works .works__wrapper {
+  margin-top: 50px;
+}
+.works .works__wrapper .works__slider__btn-area {
+  margin-top: 35px;
+  display: flex;
+  justify-content: flex-end;
+}
+.works .works__wrapper .works__slider__btn-area .slider__btn {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  margin-top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #2E80CB;
+  background-image: none;
+}
+.works .works__wrapper .works__slider__btn-area .slider__btn--prev {
+  margin-right: 50px;
+}
+.works .works__wrapper .works__slider__btn-area .slider__btn--prev::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+  border-top: 1.5px solid #fff;
+  border-left: 1.5px solid #fff;
+  transform: rotate(-45deg);
+}
+.works .works__wrapper .works__slider__btn-area .slider__btn--next::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  border-top: 1.5px solid #fff;
+  border-right: 1.5px solid #fff;
+  transform: rotate(45deg);
+}
+.works .works__wrapper .works__container {
+  margin-top: 35px;
+}
+.works .works__wrapper .works__container .works__contents .contents__image {
+  width: 370px;
+  height: 250px;
+}
+.works .works__wrapper .works__container .works__contents .contents__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*--------price---------*/
+.price {
+  padding-top: 120px;
+}
+.price .price__detail {
+  display: flex;
+  justify-content: space-between;
+}
+.price .price__detail .section__ttl {
+  margin-top: 300px;
+}
+.price .price__detail .price__container .price__image {
+  width: 880px;
+  height: 450px;
+}
+.price .price__detail .price__container .price__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 10% top;
+}
+.price .price__detail .price__container .price__inner {
+  margin-top: 70px;
+}
+.price .price__detail .price__container .price__inner .price__contents .contents__ttl {
+  font-size: 25px;
+  font-weight: 600;
+}
+.price .price__detail .price__container .price__inner .price__contents .contents__list {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dedede;
+}
+.price .price__detail .price__container .price__inner .price__contents .contents__list:first-child {
+  margin-top: 35px;
+}
+.price .price__detail .price__container .price__inner .price__contents .contents__list .list__ttl {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
