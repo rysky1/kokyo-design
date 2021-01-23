@@ -10,14 +10,29 @@
     position: fixed;
     top: 30px;
     right: 30px;
+    filter: drop-shadow(0 0 7px $color__shadow015);
+    transition: .2s;
     z-index: 1000;
+    @include sm{
+        width: 45px;
+        height: 45px;
+        top: 15px;
+        right: 15px;
+    }
     .icon__wave{
         width: 35px;
         height: 23px;
+        @include sm{
+            width: 25px;
+            height: 15px;
+        }
+    }
+    &:hover{
+        background-color: #6ea7dc;
     }
 }
 /*--------micromodal---------*/
-.modal__overlay{
+.popup__overlay{
     position: fixed;
     top: 0;
     left: 0;
@@ -27,17 +42,23 @@
     justify-content: center;
     align-items: center;
 }
-.modal__container{
+.popup__container{
     background-color: rgba( 3, 30, 68,0.95);
     width: 100%;
     max-height: 100vh;
+    height: 100%;
     padding-top: 70px;
     padding-bottom: 70px;
     border-radius: 4px;
     overflow-y: auto;
     box-sizing: border-box;
+    @include sm{
+        padding-top: 35px;
+        padding-bottom: 35px;
+        height: 100vh;
+    }
 }  
-.modal__content {
+.popup__contents{
     position: relative;
     max-width: 1200px;
     width: 100%;
@@ -45,12 +66,12 @@
     margin-left: auto;
     text-align: center;
     color: #fff;
-    .logo__area{
-        .logo{
+    .logo__container{
+        .logo__link{
             margin: 0 auto;
         }
     }
-    .modal__close {
+    .popup__close{
         position: fixed;
         top: 85px;
         right: 40px;
@@ -60,6 +81,13 @@
         background-color: transparent;
         cursor: pointer;
         transition: .3s;
+        @include sm{
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+            top: 50px;
+            right: 15px;
+        }
         &:hover{
             opacity: 0.5;
             @include sm{
@@ -76,7 +104,11 @@
             padding-top: 30px;
             padding-bottom: 30px;
             border-bottom: 1.5px solid #050f1b;
-            box-shadow: 0 0.3px 0 rgba( 255, 255, 255, 0.3);
+            box-shadow: 0 0.5px 0 rgba( 255, 255, 255, 0.3);
+            @include sm{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
             &:last-child{
                 border-bottom: none;
                 box-shadow: none;
@@ -88,12 +120,26 @@
                     font-size: 20px;
                     font-weight: 600;
                     color: #fff;
+                    transition:  all 0.3s;
+                    @include sm{
+                        font-size: 16px;
+                    }
                 }
                 .link__sub-ttl{
                     margin-top: 5px;
                     font-size: 12px;
                     font-weight: normal;
-                    color: #fff;
+                    color: #dedede;
+                    transition:  all 0.3s;
+                    @include sm{
+                        margin-top: 0;
+                        font-size: 8px;
+                    }
+                }
+                &:hover{
+                    p{
+                        color: #DEBB6A;
+                    }
                 }
             }
         }
@@ -148,30 +194,46 @@
     background-image: url(../img/mv-bg.png);
     background-position: top center;
     background-size: cover;
+    @include sm{
+        min-height: auto;
+        height: 100%;
+    }
     .mv__wave{
         position: absolute;
         top: 0;
         width: 100%;
         transform: rotate(180deg);
-
+        @include sm{
+            height: 55px;
+            object-fit: cover;
+        }
     }
     .mv__video{
         display: block;
         min-width: 100%;
+        width: 100%;
         min-height: 768px;
         height: 90vh;
         object-fit: cover;
+        @include sm{
+            min-height: auto;
+            height: 500px;
+        }
     }
-    .container-fluid{
+    .mv__ttl{
         position: absolute;
-        top: 55%;
-        transform: translateY(-50%);
-        left: 120px;
-        .mv__ttl{
-            font-size: 45px;
-            line-height: 1.7;
-            font-weight: 700;
-            color: #FFF;
+        top: 45%;
+        left: 80px;
+        font-size: 45px;
+        line-height: 1.7;
+        font-weight: 700;
+        color: #FFF;
+        @include lg{
+            left: 50px;
+        }
+        @include sm{
+            font-size: 28px;
+            left: 15px;
         }
     }
 }
@@ -179,11 +241,22 @@
 .message{
     padding-top: 220px;
     width: 100%;
+    @include sm{
+        padding-top: 70px;
+    }
+    .container-fluid--message{
+        @include xl{
+            padding: 0;
+        }
+    }
     .message__container{
         position: relative;
         display: flex;
         justify-content: center;
         background-color: #e5f3ff;
+        @include sm{
+            margin-top: 15px;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -194,25 +267,54 @@
             height: 100%;
             background-color: #e5f3ff;
         }
-        .message__image-area{
+        .message__image__container{
             width: 400px;
             height: 500px;
             margin-top: -100px;
             margin-right: 100px;
             margin-left: auto;
-            img{
+            @include xl{
+                width: 350px;
+            }
+            @include lg{
+                margin-right: 50px;
+                margin-left: 25px;
+                width: 320px;
+            }
+            @include md{
+                margin-left: 35px;
+                width: 280px;
+            }
+            @include sm{
+                display: none;
+            }
+            .img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: 80% top;
+                @include md{
+                    object-position: center top;
+                }
             }
         }
         .message__contents{
             width: 50%;
             padding-top: 60px;
             padding-bottom: 60px;
+            @include sm{
+                padding-top: 70px;
+                padding-right: 15px;
+                padding-bottom: 70px;
+                padding-left: 15px;
+                width: 100%;
+            }
             .txt__area{
                 max-width: 500px;
+                @include sm{
+                    margin-top: 15px;
+                    max-width: 100%;
+                }
                 .ttl{
                     margin-top: 25px;
                     font-size: 18px;
@@ -220,14 +322,41 @@
                 }
                 .txt{
                     margin-top: 15px;
+                    @include lg{
+                        padding-right: 20px;
+                    }
+                    @include md{
+                        padding-right: 15px;
+                    }
+                    @include sm{
+                        margin-top: 15px;
+                        padding-right: 0;
+                    }
                     .st{
                         font-weight: 500;
                         color: $color__main;
                     }
                     &--02{
                         margin-top: 27px;
+                        @include sm{
+                            margin-top: 20px;
+                        }
                     }
-                }    
+                }
+                .sp__image__container{
+                    display: none;
+                    @include sm{
+                        display: block;
+                        width: 100%;
+                        height: 280px;
+                        .img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 80% top; 
+                        }  
+                    }
+                }   
             }
         }
     }
@@ -235,8 +364,9 @@
 /*--------service---------*/
 .service{
     padding-top: 120px;
-    .container-fluid{
-        padding: 0;
+    @include sm{
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
     .section__ttl{
         text-align: center;
@@ -246,15 +376,77 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        @include md{
+            margin-top: 35px;
+        }
+        @include sm{
+            margin-top: 0;
+            flex-direction: column;
+        }
         .service__contents{
             padding-right: 40px;
             padding-left: 40px;
-            border-left: 1px solid #dedede;
-            &:nth-child(3n){
-                border-right: 1px solid #dedede;
+            width: 33.3%;
+            border-right: 1px solid #dedede;
+            &:first-child{
+                border-left: 1px solid #dedede;
+                @include md{
+                    border-left: none;
+                }
+            }
+            &:nth-child(4){
+                border-left: 1px solid #dedede;
+                @include md{
+                    border-left: none;
+                }
             }
             &:nth-child(n + 4){
                 margin-top: 70px;
+                @include md{
+                    margin-top: 0;
+                }
+            }
+            @include lg{
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            @include md{
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-top: 35px;
+                width: 50%;
+                &:nth-child(n + 3){
+                    margin-top: 35px;
+                    @include sm{
+                        margin-top: 0;
+                    }
+                }
+                &:nth-child(odd){
+                    border-left: 1px solid #dedede;
+                    @include sm{
+                        border-right: none;
+                    }
+                }
+            }
+            @include sm{
+                padding-top: 35px;
+                padding-right: 0;
+                padding-bottom: 35px;
+                padding-left: 0;
+                margin-top: 0;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #dedede;
+                &:last-child{
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+                &:nth-child(n + 3){
+                    margin-top: 0;
+                }
+                &:nth-child(odd){
+                    border-left: none;
+                }
             }
             .contents__icon{
                 max-width: 125px;
@@ -272,20 +464,42 @@
                 font-weight: 600;
                 color: #5d5d5d;
                 text-align: center;
+                @include lg{
+                    font-size: 20px;
+                }
+                @include sm{
+                    margin-top: 25px;
+                }
             }
             .contents__txt{
-                width: calc(320px - 2px);
-                //border分:2px
                 min-height: 110px;
                 margin-top: 15px;
                 color: #5d5d5d;
-            }    
+                @include lg{
+                    padding-bottom: 15px;
+                }
+                @include sm{
+                    padding-bottom: 0;
+                }
+            }
+            .more__btn{
+                display: none;
+                @include sm{
+                    display: block;
+                }
+            }
         }
     }
 }
 /*--------works---------*/
 .works{
     padding-top: 300px;
+    @include sm{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background: #B5DBFF;
+        background: linear-gradient(to right,#B5DBFF,#F7FBFF);
+    }
     .section__ttl{
         position: relative;
         &::before{
@@ -296,16 +510,36 @@
             transform: translateY(-50%);
             width: calc(650px + (50vw - 600px));
             height: 350px;
+            background: #B5DBFF;
             background: linear-gradient(to right,#B5DBFF,#F7FBFF);
             z-index: -10;
+            @include xl{
+                left: -15px;
+            }
+            @include md{
+                height: 250px;
+            }
+            @include sm{
+                content: none;
+            }
         }
     }
     .works__wrapper{
         margin-top: 50px;
+        @include sm{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
         .works__slider__btn-area{
             margin-top: 35px;
             display: flex;
             justify-content: flex-end;
+            @include sm{
+                margin-top: 25px;
+                justify-content: space-between;
+                order: 2;
+            }
             .slider__btn{
                 position: relative;
                 top: auto;//swiper css打消し
@@ -317,8 +551,16 @@
                 border-radius: 50%;
                 background-color: $color__main;
                 background-image: none;//swiper初期画像消し
+                filter: drop-shadow(0 0 5px $color__shadow015);
+                @include sm{
+                    width: 45px;
+                    height: 45px;
+                }
                 &--prev{
                     margin-right: 50px;
+                    @include sm{
+                        margin-right: 0;
+                    }
                     &::before{
                         content: "";
                         position: absolute;
@@ -329,6 +571,11 @@
                         border-top: 1.5px solid #fff;
                         border-left: 1.5px solid #fff;
                         transform: rotate(-45deg);
+                        @include sm{
+                            left: 19px;
+                            width: 12px;
+                            height: 12px;
+                        }
                     }    
                 }
                 &--next{
@@ -342,19 +589,45 @@
                         border-top: 1.5px solid #fff;
                         border-right: 1.5px solid #fff;
                         transform: rotate(45deg);
+                        @include sm{
+                            right: 19px;
+                            width: 12px;
+                            height: 12px;
+                        }
                     }    
                 }
             }
         }
         .works__container{
             margin-top: 35px;
+            @include sm{
+                margin-top: 0;
+                order: 1;
+            }
             .works__contents{
                 .contents__image{
                     width: 370px;
                     height: 250px;
+                    @include lg{
+                        width: 100%;
+                        height: auto;
+                    }
                     img{
                         width: 100%;
                         height: 100%;
+                        @include lg{
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .contents__ttl{
+                    margin-top: 25px;
+                }
+                .contents__txt02{
+                    margin-top: 5px;
+                    color: #5d5d5d;
+                    @include sm{
+                        font-size: 14px;
                     }
                 }
             }
@@ -364,16 +637,50 @@
 /*--------price---------*/
 .price{
     padding-top: 120px;
+    @include sm{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
     .price__detail{
         display: flex;
         justify-content: space-between;
+        @include md{
+            flex-direction: column;
+            justify-content: flex-start;
+        }
         .section__ttl{
             margin-top: 300px;
+            @include xl{
+                margin-top: 250px;
+            }
+            @include lg{
+                margin-top: 200px;
+            }
+            @include md{
+                margin-top: 0;
+                margin-bottom: 35px;
+            }
         }
         .price__container{
             .price__image{
                 width: 880px;
                 height: 450px;
+                @include xl{
+                    margin-left: 120px;
+                    width: auto;
+                    height: 400px;
+                }
+                @include lg{
+                    margin-left: 60px;
+                    height: 350px;
+                }
+                @include md{
+                    margin-left: 0;
+                }
+                @include sm{
+                    width: 100%;
+                    height: 230px;
+                }
                 img{
                     width: 100%;
                     height: 100%;
@@ -383,14 +690,33 @@
             }
             .price__inner{
                 margin-top: 70px;
+                @include xl{
+                    margin-left: 120px;
+                }
+                @include lg{
+                    margin-left: 60px;
+                }
+                @include md{
+                    margin-top: 35px;
+                    margin-left: 0;
+                }
                 .price__contents{
-                    width: 580px;
+                    width: 600px;
                     margin-bottom: 35px;
+                    @include lg{
+                        width: 100%;
+                    }
                     .contents__ttl{
                         font-size: 25px;
                         font-weight: 600;
                     }
                     .contents__list{
+                        @include lg{
+                            padding-right: 50px;
+                        }
+                        @include sm{
+                            padding-right: 0;
+                        }
                         &:first-of-type{
                             margin-top: 10px;
                         }
@@ -402,6 +728,11 @@
                         .list__ttl{
                             color: #5d5d5d;
                             font-weight: 600;
+                            @include sm{
+                                margin-right: 15px;
+                                font-weight: 500;
+                                line-height: 1.5;
+                            }
                         }
                         .list__price{
                             letter-spacing: 0.07rem;
@@ -425,7 +756,319 @@
                         }
                     }
                 }
-            }  
+            }
+            .more__btn{
+                margin-top: 50px;
+            }
+            .popup__container--flow{
+                padding-right: 15px;
+                padding-left: 15px;
+                background-color: #fff;
+                @include xl{
+                    padding-top: 35px;
+                    padding-bottom: 35px;
+                    @include xs{
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            .popup__close--flow{
+                background-image: url(../img/close_btn-b.svg);
+            }
+            .popup__contents--flow{
+                text-align: left;
+                .flow__ttl{
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 70px;
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: $color__main-font;
+                    @include sm{
+                        margin-bottom: 35px;
+                        font-size: 23px;
+                        line-height: 1.5;
+                    }    
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                        width: 4px;
+                        height: 25px;
+                        background-color: $color__main;
+                        @include sm{
+                            top: 0;
+                            height: 100%;
+                        }
+                    }
+                }
+                .flow__container{
+                    position: relative;
+                    padding-bottom: 120px;
+                    display: flex;
+                    z-index: 10;
+                    @include sm{
+                        padding-bottom: 35px;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 50px;
+                        width: 1px;
+                        height: 100%;
+                        background-color: #dedede;
+                        z-index: -10;
+                        @include sm{
+                            left: 25px;
+                        }
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                        &::before{
+                            content: none;
+                        }
+                    }
+                    .flow__number{
+                        margin-right: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $color__main;
+                        min-width: 100px;
+                        height: 100px;
+                        font-size: 45px;
+                        font-weight: bold;
+                        color: #fff;
+                        @include sm{
+                            min-width: 50px;
+                            height: 50px;
+                            font-size: 25px;
+                            margin-right: 20px;
+                        }
+                    }
+                    .flow__contents{
+                        position: relative;
+                        .ttl__contents{
+                            margin-bottom: 15px;
+                            display: flex;
+                            align-items: center;
+                            @include sm{
+                                margin-top: 11px;
+                                align-items: stretch;
+                            }
+                            .icon__container{
+                                margin-right: 20px;
+                                max-width: 35px;
+                                height: 25px;
+                                @include sm{
+                                    margin-top: 7px;
+                                }
+                                &--03{
+                                    height: 28px;
+                                }
+                                &--04{
+                                    height: 33px;
+                                }
+                                @include sm{
+                                    margin-right: 10px;
+                                    max-width: 25px;
+                                    height: 20px;
+                                    &--03,&--04{
+                                        height: 23px;
+                                    }
+                                }
+                                .icon{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .ttl{
+                                font-size: 25px;
+                                font-weight: bold;
+                                color: #5d5d5d;
+                                @include sm{
+                                    font-size: 20px;
+                                    color: $color__main-font
+                                }
+                            }
+                        }
+                        .txt__contents{
+                            .txt01{
+                                color: #5d5d5d;
+                            }
+                            .contact__link{
+                                display: inline-block;
+                                color: $color__main;
+                                font-weight: bold;
+                                @include sm{
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+}
+/*--------profile---------*/
+.profile{
+    padding-top: 120px;
+    @include sm{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: #DFF0FF;
+    }
+    .profile__cotainer{
+        display: flex;
+        @include sm{
+            flex-direction: column;
+        }  
+    }
+    .profile__image__container{
+        min-width: 50%;
+        height: 410px;
+        z-index: 20;
+        @include lg{
+            min-width: 45%;
+        }
+        @include sm{
+            display: none;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include xxl-or-more{
+                object-position: center 30%;
+            }
+            @include md{
+                object-position: 65% top;
+            }
+        }
+    }
+    .profile__detail{
+        position: relative;
+        padding-left: 120px;
+        width: 100%;
+        z-index: 10;
+        @include xl{
+            padding-left: 80px;
+        }
+        @include lg{
+            padding-left: 50px;
+            min-width: 50%;
+        }
+        @include sm{
+            min-width: auto;
+            padding-left: 0;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 170px;
+            left: -220px;
+            width: calc(100% + 220px);
+            height: calc(100% - 170px);
+            background-color: #DFF0FF;
+            z-index: -10;
+            @include sm{
+                content: none;
+            }
+        }
+        .section__ttl{
+            padding-top: 35px;
+            @include sm{
+                padding-top: 0;
+            }
+        }
+        .profile__contents{
+            position: relative;
+            margin-top: 35px;
+            padding-bottom: 60px;
+            z-index: 10;
+            @include lg{
+                padding-right: 15px;
+            }
+            @include sm{
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+            .profile__name{
+                color: #5d5d5d;
+                .name__01{
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .name__02{
+                    display: block;
+                    font-size: 14px;
+                }
+            }
+            .profile__txt01{
+                margin-top: 15px;
+                max-width: 350px;
+                color: #5d5d5d;
+                @include sm{
+                    max-width: 100%;
+                }
+            }
+            .sp__image__container{
+                display: none;
+                @include sm{
+                    display: block;
+                    margin-top: 15px;
+                    width: 100%;
+                    height: auto;
+                    .img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .profile__skill__container{
+                margin-top: 35px;
+                display: flex;
+                align-items: center;
+                @include sm{
+                    margin-top: 15px;
+                }
+                .icon__container{
+                    margin-right: 15px;
+                    width: 30px;
+                    height: 30px;
+                    .icon{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &--php{
+                        margin-right: 0;
+                        margin-left: -7px;
+                        width: auto;
+                        height: 25px;
+                    }
+                }
+            }
+            .more__btn{
+                margin-top: 35px;
+            }
+        }
+    }
+}
+/*--------contact---------*/
+.contact{
+    padding-top: 120px;
+    @include sm{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .section__ttl{
+        text-align: center;
     }
 }

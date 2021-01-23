@@ -23,22 +23,22 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev'
     },
     breakpoints: {
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 30    
+            },//window width is >= 991px
+        767: {
+            slidesPerView: 2,
+            spaceBetween: 50
+            },//window width is >= 767px
+        575: {
+            slidesPerView: 1,
+            spaceBetween: 25
+            },//window width is >= 575px
         250: {
         slidesPerView: 1,
         spaceBetween: 55
         },
-        575: {
-        slidesPerView: 2,
-        spaceBetween: 25
-        },//window width is >= 575px
-        767: {
-        slidesPerView: 2,
-        spaceBetween: 50
-        },//window width is >= 767px
-        991: {
-        slidesPerView: 3,
-        spaceBetween: 30    
-        }//window width is >= 991px
     }
 });
 
