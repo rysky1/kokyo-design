@@ -1,19 +1,23 @@
 .header{
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    .logo__area{
-        margin-top: 30px;
+    @include sm{
+        padding-top: 15px;
+    }
+    .logo__container{
         margin-left: 30px;
+        @include sm{
+            margin-left: 15px;
+        }
     }
     .header__contact__btn{
         display: flex;
         align-items: center;
-        margin-top: 30px;
         margin-right: 125px;
         @include sm{
-            margin-top: 15px;
             margin-right: 80px;
         }
         .icon__container{

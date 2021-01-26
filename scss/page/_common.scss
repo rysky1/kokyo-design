@@ -127,18 +127,6 @@ img{
             opacity: 0.7;
         }
     }
-    &--header{
-        margin-top: 30px;
-        @include sm{
-            margin-top: 15px;
-        }
-        .logo__link{
-            margin-left: 30px;
-            @include sm{
-                margin-right: 15px;
-            }    
-        }
-    }
     &--footer{
         .logo__link{
             margin-right: auto;
@@ -198,6 +186,21 @@ img{
         .btn__txt{
             color: #61a4e2;
         }
+    }
+}
+
+/*--------------kv-----------*/
+.kv{
+    margin-top: 30px;
+    width: 100%;
+    min-height: 350px;
+    background-image: url(../img/about_kv_img.jpg);
+    background-size: cover;
+    &--profile{
+        background-image: url(../img/about_kv_img.jpg);
+    }
+    @include sm{
+    margin-top: 15px;
     }
 }
 
