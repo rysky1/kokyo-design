@@ -3,7 +3,8 @@
 <main class="single">
     <?php if ( have_posts() ) : ?>
     <?php while( have_posts() ) : the_post(); ?>
-        <div class="ttl-area">
+    <div class="container-fluid">
+        <div class="ttl__container">
             <div class="detail__box">
                 <p class="category"><?php the_category(' '); ?></p>
                 <time class="time" datetime="<?php echo get_the_date('Y-m-d'); ?>" itemprop="datepublished"><?php echo get_the_date('Y-m-d'); ?></time>
@@ -19,9 +20,14 @@
         <div class="wysiwyg-editor">
             <?php the_content(); ?>
         </div>
+    </div><!--/.container-fluid-->
     <?php endwhile;?>
     <?php endif; ?>
-    <!--パンくず--><?php echo breadcrumb_func(); ?>
 </main>
-
+<!-- -----------------breadcrum------------------- -->
+<main class="breadcrumb__container">
+    <div class="container-fluid">
+        <!--パンくず--><?php echo breadcrumb_func(); ?>
+    </div>
+</main>
 <?php get_footer(); ?>

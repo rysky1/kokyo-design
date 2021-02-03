@@ -206,47 +206,57 @@ img{
 }
 
 //パンくず
-.breadcrumb{
-    padding: 25px 0;
-    margin-bottom: 0;
-    background-color: transparent;
-    li{
-        position: relative;
-        &::after{
-            content: "";
-            position: absolute;
-            right: 8px;
-            top: 3px;
-            width: 10px;
-            height: 10px;
-            border-top: 1.5px solid #5d5d5d;
-            border-right: 1.5px solid #5d5d5d;
-            transform: rotate(45deg);
-        }
-        &:last-child{
+.breadcrumb__container{
+    width: 100%;
+    .breadcrumb{
+        padding: 10px 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: #fff;
+        li{
+            position: relative;
             &::after{
-                content: none;
+                content: "";
+                position: absolute;
+                right: 8px;
+                top: 3px;
+                width: 10px;
+                height: 10px;
+                border-top: 1.5px solid #5d5d5d;
+                border-right: 1.5px solid #5d5d5d;
+                transform: rotate(45deg);
             }
-        }
-        a{
-            display: block;
-            margin-right: 20px;
-            color: #5d5d5d;
-            font-size: 12px;
-            line-height: 1.4;
-            .home__btn{
-                position: relative;
+            &:last-child{
+                &::after{
+                    content: none;
+                }
+            }
+            a{
                 display: block;
-                padding-left: 25px;
-                &::before{
-                    content: "";
-                    background-image: url(../img/home-icon-gray.svg);
-                    width: 20px;
-                    height: 20px;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%);
+                margin-right: 20px;
+                color: #5d5d5d;
+                font-size: 12px;
+                line-height: 1.4;
+                .home__btn{
+                    position: relative;
+                    display: block;
+                    padding-left: 17px;
+                    &::before{
+                        content: "";
+                        background-image: url(../img/home_icon.svg);
+                        background-size: cover;
+                        width: 14px;
+                        height: 14px;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            &:hover{
+                a{
+                    text-decoration: underline;
                 }
             }
         }

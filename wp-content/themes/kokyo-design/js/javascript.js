@@ -25,7 +25,7 @@ var swiper = new Swiper('.swiper-container', {
     breakpoints: {
         1200: {
             slidesPerView: 2,
-            spaceBetween: 30    
+            spaceBetween: 30
             },//window width is >= 991px
         767: {
             slidesPerView: 2,
@@ -48,7 +48,7 @@ $(function(){
         var speed = 500;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top -80;
+        var position = target.offset().top;
         $('body,html').animate({scrollTop:position},speed,'swing');
         return false;
     });

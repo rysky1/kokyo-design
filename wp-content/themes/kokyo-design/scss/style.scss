@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*!
-Theme Name: BRIGHTLINK
+Theme Name: Kokyo-design
 Author:fines
-Description:ブライトリンク様
-Version:1.2
+Description:kokyo-design
+Version:1.0
 */
 
 //mixin
@@ -26,8 +26,8 @@ Version:1.2
 //page
 @import "page/common";
 @import "page/home";
-//@import "page/single";
-//@import "page/page";
+@import "page/single";
+@import "page/page";
 @import "page/about";
-//@import "page/contact";
+@import "page/contact";
 //@import "page/question";
