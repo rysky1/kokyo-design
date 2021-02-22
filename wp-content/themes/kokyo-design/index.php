@@ -10,7 +10,7 @@
         <div class="container-fluid container-fluid--message">
             <div class="message__container">
                 <div class="message__image__container">
-                    <img src="<?php echo esc_url( get_theme_file_uri( "img/message_img.jpeg" ) ); ?>" alt="青空" class="img">
+                    <img src="<?php echo esc_url( get_theme_file_uri( "img/message_img.jpg" ) ); ?>" alt="青空" class="img">
                 </div>
                 <div class="message__contents">
                     <h2 class="section__ttl">
@@ -19,10 +19,10 @@
                     </h2>
                     <div class="txt__area">
                         <div class="sp__image__container">
-                            <img src="<?php echo esc_url( get_theme_file_uri( "img/message_img.jpeg" ) ); ?>" alt="青空" class="img">
+                            <img src="<?php echo esc_url( get_theme_file_uri( "img/message_img.jpg" ) ); ?>" alt="青空" class="img">
                         </div>
                         <h3 class="ttl">人に寄り添うデザイン</h3>
-                        <p class="txt">デザイン･ホームページ制作にはさまざまな可能性がありますが<br class="lg__none">お客さまの想い、課題に対して寄り添い、<strong class="st">価値のある</strong>デザインが<br class="lg__none">重要だと考えています。<br>価値を正確に伝える事。利用者様が使いやすく、目的を達成できる<br class="lg__none">ことを重視した制作を心がけています。</p>
+                        <p class="txt">デザイン･ホームページ制作にはさまざまな可能性がありますが<br class="lg__none">お客さまの想い、課題に対して寄り添い、<strong class="st">価値のある</strong>デザインが<br class="lg__none">重要だと考えています。<br>価値を正確に伝える事。利用者様が使いやすく、目的を達成できる<br class="lg__none">ことを重点の置いた制作を心がけています。</p>
                         <p class="txt txt--02">KOKYO DESIGNの<strong class="st">KOKYO(故郷)</strong>には、<strong class="st">”安心する場所”</strong>という思いを<br class="lg__none">込めております。<br class="lg__none">お客様が、安心していただけるよう丁寧で柔軟なサポートをして<br class="lg__none">いきたいと考えています。</p>
                     </div><!--/.txt__area-->
                 </div><!--/.message__contents-->
@@ -49,7 +49,7 @@
                         <img src="<?php echo esc_url( get_theme_file_uri( "img/service-icon2.svg" ) ); ?>" alt="設計図のアイコン" class="icon__img">
                     </div>
                     <p class="contents__ttl">デザイン</p>
-                    <p class="contents__txt">バナーやSNSのカバー、ホームページや<br class="lg__none">ランディングページのデザインを行います。お客様のご要望･コンセプト等をヒアリングさせて頂き、デザインを作成いたします。</p>
+                    <p class="contents__txt">バナーやSNSのカバー、ホームページや<br class="xl__none">ランディングページのデザインを行います。お客様のご要望･コンセプト等をヒアリングさせて頂き、デザインを作成いたします。</p>
                 </div><!--/.service__contents-->
                 <div class="service__contents">
                     <div class="contents__icon">
@@ -63,21 +63,21 @@
                         <img src="<?php echo esc_url( get_theme_file_uri( "img/service-icon4.svg" ) ); ?>" alt="テキストのアイコン" class="icon__img">
                     </div>
                     <p class="contents__ttl">ランディングページ制作</p>
-                    <p class="contents__txt">サービスや商品の魅力をストーリーで<br class="lg__none">伝える、ランディングページを制作します。商品価値を分かりやすく伝え、<br class="lg__none">問い合わせに結びつきやすくします。</p>
+                    <p class="contents__txt">サービスや商品の魅力をストーリーで<br class="xl__none">伝える、ランディングページを制作します。商品価値を分かりやすく伝え、<br class="xl__none">問い合わせに結びつきやすくします。</p>
                 </div><!--/.service__contents-->
                 <div class="service__contents">
                     <div class="contents__icon">
                         <img src="<?php echo esc_url( get_theme_file_uri( "img/service-icon5.svg" ) ); ?>" alt="キーボードのアイコン" class="icon__img">
                     </div>
                     <p class="contents__ttl">コーディング</p>
-                    <p class="contents__txt">コーディングのみの対応も行っております。デザインカンプから、第三者にも<br class="lg__none">メンテナンスしやすく、見やすい汎用的なマークアップを行います。</p>
+                    <p class="contents__txt">コーディングのみの対応も行っております。デザインカンプから、第三者にも<br class="xl__none">メンテナンスしやすく、見やすい汎用的なマークアップを行います。</p>
                 </div><!--/.service__contents-->
                 <div class="service__contents">
                     <div class="contents__icon">
                         <img src="<?php echo esc_url( get_theme_file_uri( "img/service-icon6.svg" ) ); ?>" alt="名刺のアイコン" class="icon__img">
                     </div>
                     <p class="contents__ttl">その他デザイン</p>
-                    <p class="contents__txt">ウェブ媒体のみではなく、ポスターや<br class="sm__none">チラシ、名刺などのデザインも承って<br class="lg__none">おりますのでお気軽にご依頼ください。</p>
+                    <p class="contents__txt">ウェブ媒体のみではなく、ポスターや<br class="xl__none">チラシ、名刺などのデザインも承って<br class="xl__none">おりますのでお気軽にご依頼ください。</p>
                     <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
                         <p class="btn__txt">お問い合わせへ</p>
                     </a>
@@ -98,12 +98,12 @@
                     <div class="swiper-button-next slider__btn slider__btn--next"></div>
                 </div>
                 <div class="swiper-wrapper works__container">
-                    <div class="swiper-slide works__contents" data-micromodal-trigger="modal-3" role="button">
+                    <a href="#works1" class="swiper-slide works__contents modal__open">
                         <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product01.png" ) ); ?>" alt="実績PC画面"></p>
                         <p class="contents__ttl">コーポレートサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
-                    </div><!--/.swiper-slide works__contents-->
-                    <div class="swiper-slide works__contents" data-micromodal-trigger="modal-4" role="button">
+                    </a><!--/.swiper-slide works__contents-->
+                    <div class="swiper-slide works__contents">
                         <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product02.png" ) ); ?>" alt="実績PC画面"></p>
                         <p class="contents__ttl">ポートフォリオサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
@@ -117,75 +117,40 @@
             </div><!--/.swiper-container works__wrapper-->
         </div><!--/.container-fluid-->
     </section>
-<!--POPUP IMAGE1-->
-<div class="modal micromodal-slide works__popup" id="modal-3" aria-hidden="true">
-    <div class="modal__overlay popup__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container popup__container popup__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title" data-micromodal-close>
-            <div class="modal__content popup__contents" id="modal-3-content">
-                <div class="modal__header popup__header">
-                    <h3 id="modal-3-title" class="product__ttl">コーポレートサイト</h3>
-                    <div class="modal__close popup__close popup__close--works" aria-label="Close modal" data-micromodal-close></div>
-                    <div class="product__container">
-                        <div class="product__contents">
-                            <p class="contents__txt01">コーポレートサイトのデザインの設計･コーディング・Wordpress構築をしました。<br>全体敵にPOPな印象で制作。商品一覧ページの構築も対応しております。</p>
-                        </div>
-                        <div class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/works_popup01.jpg" ) ); ?>" alt="" class="img"></div>
-                        <p class="contents__txt02">制作実績に興味のある方は下記からお問い合わせください。</p>
-                        <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
-                        <p class="btn__txt">お問い合わせへ</p>
-                    </a>
-                    </div><!--/.popup__container-->
-                </div><!--/.modal__header-->
-            </div><!--/.modal__content-->
-        </div><!--/.modal__container-->
-    </div><!--/.modal__overlay-->
-</div><!--/.modal micromodal-slide-->
-<!--POPUP IMAGE2-->
-<div class="modal micromodal-slide works__popup" id="modal-4" aria-hidden="true">
-    <div class="modal__overlay popup__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container popup__container popup__container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title" data-micromodal-close>
-            <div class="modal__content popup__contents" id="modal-4-content">
-                <div class="modal__header popup__header">
-                    <h3 id="modal-4-title" class="product__ttl">ポートフォリオサイト</h3>
-                    <div class="modal__close popup__close popup__close--works" aria-label="Close modal" data-micromodal-close></div>
-                    <div class="product__container">
-                        <div class="product__contents">
-                            <p class="contents__txt01">ポートフォリオサイトを新しくデザインから作成しました。<br>分かりやすさを優先してシンプルなテイストで制作しました。</p>
-                        </div>
-                        <div class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/works_popup02.jpg" ) ); ?>" alt="" class="img"></div>
-                        <p class="contents__txt02">制作実績に興味のある方は下記からお問い合わせください。</p>
-                        <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
-                        <p class="btn__txt">お問い合わせへ</p>
-                    </a>
-                    </div><!--/.popup__container-->
-                </div><!--/.modal__header-->
-            </div><!--/.modal__content-->
-        </div><!--/.modal__container-->
-    </div><!--/.modal__overlay-->
-</div><!--/.modal micromodal-slide-->
-<!--POPUP IMAGE3-->
-<div class="modal micromodal-slide works__popup" id="modal-5" aria-hidden="true">
-    <div class="modal__overlay popup__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container popup__container popup__container" role="dialog" aria-modal="true" aria-labelledby="modal-5-title" data-micromodal-close>
-            <div class="modal__content popup__contents" id="modal-5-content">
-                <div class="modal__header popup__header">
-                    <h3 id="modal-5-title" class="product__ttl">コーポレートサイト</h3>
-                    <div class="modal__close popup__close popup__close--works" aria-label="Close modal" data-micromodal-close></div>
-                    <div class="product__container">
-                        <div class="product__contents">
-                            <p class="contents__txt01">クライアント様ご要望のテイストを反映して<br>デザインを作成しました。</p>
-                        </div>
-                        <div class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/works_popup03.png" ) ); ?>" alt="" class="img"></div>
-                        <p class="contents__txt02">制作実績に興味のある方は下記からお問い合わせください。</p>
-                        <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
-                        <p class="btn__txt">お問い合わせへ</p>
-                    </a>
-                    </div><!--/.popup__container-->
-                </div><!--/.modal__header-->
-            </div><!--/.modal__content-->
-        </div><!--/.modal__container-->
-    </div><!--/.modal__overlay-->
-</div><!--/.modal micromodal-slide-->
+    <!--POPUP WORKS1-->
+    <section id="works1" class="works__popup">
+        <div class="container-fluid works__popup__container">
+            <div class="head">
+                <p class="sub__ttl">Website</p>
+                <h2 class="ttl">コーポレートサイト</h2>
+            </div>
+            <div class="works__contents">
+                <table class="contents__tb">
+                    <tr>
+                        <th>In charge</th>
+                        <td>Design / Cording / Wordpress</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>2020/12</td>
+                    </tr>
+                </table>
+                <p class="contents__txt01">コーポレートサイトの制作を行いました。”ワクワクする・クリエイティブ”をコンセプトにデザインから設計、商品の一覧ページも構築させていただきました。</p>
+            </div>
+            <div class="web__img__container">
+                <img src="<?php echo esc_url( get_theme_file_uri( "img/works_brightlink.jpg" ) ); ?>" alt="制作物の画像" class="img">
+            </div>
+            <div class="sp__img__wrapper">
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/brightlink_sp1.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/brightlink_sp2.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/brightlink_sp3.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+            </div><!--/.sp__img__wrapper-->
+            <p class="contact__txt01">制作物に興味のある方は下記からお問い合わせください。</p>
+            <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
+                <p class="btn__txt">お問い合わせへ</p>
+            </a>
+        </div><!--/.container-fluid-->
+    </section>
     <!---------------------price------------------------>
     <section id="price" class="price">
         <div class="container-fluid">
@@ -196,7 +161,7 @@
                 </h2>
                 <div class="price__container">
                     <div class="price__image">
-                        <img src="<?php echo esc_url( get_theme_file_uri( "img/price_img.jpeg" ) ); ?>" alt="夕焼け">
+                        <img src="<?php echo esc_url( get_theme_file_uri( "img/price_img.jpg" ) ); ?>" alt="夕焼け">
                     </div>
                     <div class="price__inner">
                         <div class="price__contents">
@@ -225,8 +190,12 @@
                                 <p class="list__price">&yen;15,000~</p>
                             </div><!--/.contents__list-->
                             <div class="contents__list">
+                                <p class="list__ttl">チラシデザイン</p>
+                                <p class="list__price">&yen;20,000~</p>
+                            </div><!--/.contents__list-->
+                            <div class="contents__list">
                                 <p class="list__ttl">バナーデザイン</p>
-                                <p class="list__price">&yen;5,000~</p>
+                                <p class="list__price">&yen;6,000~</p>
                             </div><!--/.contents__list-->
                             <div class="contents__list">
                                 <p class="list__ttl">ロゴデザイン</p>
@@ -234,7 +203,7 @@
                             </div><!--/.contents__list-->
                             <div class="contents__list">
                                 <p class="list__ttl">名刺デザイン</p>
-                                <p class="list__price">&yen;10,000~</p>
+                                <p class="list__price">&yen;12,000~</p>
                             </div><!--/.contents__list-->
                         </div><!--/.price__contents-->
                         <div class="price__contents">
@@ -258,114 +227,117 @@
                             </div><!--/.attention__contents-->
                         </div>
                     </div><!--/.price__inner-->
-                    <div data-micromodal-trigger="modal-2" role="button" class="more__btn">
+                    <a href="#flow" class="more__btn modal__open">
                         <p class="btn__txt">ホームページ制作の流れ</p>
-                    </div>
-                    <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
-                        <div class="modal__overlay popup__overlay" tabindex="-1" data-micromodal-close>
-                            <div class="modal__container popup__container popup__container--flow" role="dialog" aria-modal="true" aria-labelledby="modal-2-title" data-micromodal-close>
-                                <div class="modal__content popup__contents popup__contents--flow" id="modal-2-content">
-                                    <div class="modal__header popup__header">
-                                        <h3 id="modal-2-title" class="flow__ttl">ホームページ制作の<br class="sm__block">大まかな流れ</h3>
-                                        <div class="modal__close popup__close popup__close--flow" aria-label="Close modal" data-micromodal-close></div>
-                                    </div><!--/.modal__header-->
-                                    <div class="flow__container">
-                                        <p class="flow__number">01</p>
-                                        <div class="flow__contents">
-                                            <div class="ttl__contents">
-                                                <p class="icon__container">
-                                                    <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon1.svg" ) ); ?>" alt="メールのアイコン" class="icon">
-                                                </p>
-                                                <p class="ttl">お問い合わせ</p>
-                                            </div><!--/.ttl__contents-->
-                                            <div class="txt__contents">
-                                                <p class="txt01"><a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="contact__link">お問い合わせフォーム</a>からお問い合わせください。<br>ご要望(ホームページを新しくしたい・リニューアルしたい、デザイン･コーディングのみ依頼したい、とりあえず一度相談してみたい...etc)をお問い合わせ内容に記載いただき送信ください。原則24時間以内に内容を確認させていただき、ご返信いたします。</p>
-                                            </div>
-                                        </div><!--/.flow__contents-->
-                                    </div><!--/.flow__container-->
-                                    <div class="flow__container">
-                                        <p class="flow__number">02</p>
-                                        <div class="flow__contents">
-                                            <div class="ttl__contents">
-                                                <p class="icon__container">
-                                                    <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon2.svg" ) ); ?>" alt="吹き出しのアイコン" class="icon">
-                                                </p>
-                                                <p class="ttl">打ち合わせ</p>
-                                            </div><!--/.ttl__contents-->
-                                            <div class="txt__contents">
-                                                <p class="txt01">ミーティングアプリ(Zoom/Google Meet)を使用したテレビ電話にて打ち合わせさせていただきます。お客様のご要望をお聞かせください。もちろんメールやslackでの打ち合わせも可能です。原則オンラインでの打ち合わせになりますが千葉県内、都内であれば日程を調整させていただき、直接打ち合わせも可能です。</p>
-                                            </div>
-                                        </div><!--/.flow__contents-->
-                                    </div><!--/.flow__container-->
-                                    <div class="flow__container">
-                                        <p class="flow__number">03</p>
-                                        <div class="flow__contents">
-                                            <div class="ttl__contents">
-                                                <p class="icon__container icon__container--03">
-                                                    <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon3.svg" ) ); ?>" alt="テキストのアイコン" class="icon">
-                                                </p>
-                                                <p class="ttl">お見積り書･納品スケジュール作成</p>
-                                            </div><!--/.ttl__contents-->
-                                            <div class="txt__contents">
-                                                <p class="txt01">お伺いしたご要望をまとめ、お見積り書と納品までのスケジュールをまとめてメールにて送信いたします。内容をご確認いただき、ご承諾いただけましたら契約成立とさせて頂き制作に着手します。</p>
-                                            </div>
-                                        </div><!--/.flow__contents-->
-                                    </div><!--/.flow__container-->
-                                    <div class="flow__container">
-                                        <p class="flow__number">04</p>
-                                        <div class="flow__contents">
-                                            <div class="ttl__contents">
-                                                <p class="icon__container icon__container--04">
-                                                    <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon4.svg" ) ); ?>" alt="パレット" class="icon">
-                                                </p>
-                                                <p class="ttl">デザイン作成</p>
-                                            </div><!--/.ttl__contents-->
-                                            <div class="txt__contents">
-                                                <p class="txt01">お客様から伺ったご要望を基に、トップページデザインを作成します。出来るかぎり、どんなイメージにしたいか、色合いなどをヒアリングさせていただき相違がないようデザインしていきます。作成後、ご確認いただきます。(イメージと違ったなどありましたら再度作成し直します)</p>
-                                            </div>
-                                        </div><!--/.flow__contents-->
-                                    </div><!--/.flow__container-->
-                                    <div class="flow__container">
-                                        <p class="flow__number">05</p>
-                                        <div class="flow__contents">
-                                            <div class="ttl__contents">
-                                                <p class="icon__container">
-                                                    <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon5.svg" ) ); ?>" alt="PCのアイコン" class="icon">
-                                                </p>
-                                                <p class="ttl">コーディング･サイト構築･テスト</p>
-                                            </div><!--/.ttl__contents-->
-                                            <div class="txt__contents">
-                                                <p class="txt01">デザイン確定後、WEBサイトに表示されるようコーディング･プログラミング作業を進め、サイトを構築いたします。完成後、テスト用にパスワードを設定して仮公開します。テストをして、お客さまにもご確認いただき細かい修正をいたします。       </p>
-                                            </div>
-                                        </div><!--/.flow__flow__contents-->
-                                    </div><!--/.flow__contents-->
-                                    <div class="flow__container">
-                                        <p class="flow__number">06</p>
-                                        <div class="flow__contents">
-                                            <div class="ttl__contents">
-                                                <p class="icon__container">
-                                                    <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon6.svg" ) ); ?>" alt="目的地のアイコン" class="icon">
-                                                </p>
-                                                <p class="ttl">納品(本番へアップロード･公開)</p>
-                                            </div><!--/.ttl__contents-->
-                                            <div class="txt__contents">
-                                                <p class="txt01">テスト･修正後、本番サーバーへアップロードを行います。問題がないかチェックを行い、納品完了とさせていただきます。その後、問題が起きたなどトラブルがあれば対応いたします。(保守やページの追加、修正などは別途費用がかかりますのでご了承ください)</p>
-                                            </div>
-                                        </div><!--/.flow__flow__contents-->
-                                    </div><!--/.flow__container-->
-                                </div><!--/.modal__content-->
-                            </div><!--/.modal__container-->
-                        </div><!--/.modal__overlay-->
-                    </div><!--/.modal micromodal-slide-->
+                    </a>
                 </div><!--/.price__container-->
             </div><!--/.price__detail-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!--------------FLOW POPUP------------->
+    <section id="flow" class="flow__popup">
+        <div class="container-fluid">
+            <div class="popup__overlay">
+                <div class="popup__container popup__container--flow">
+                    <div class="popup__contents popup__contents--flow">
+                        <div class="popup__header">
+                            <h3 class="flow__ttl">ホームページ制作の流れ</h3>
+                            <div class="modal__close popup__close popup__close--flow"></div>
+                        </div><!--/.modal__header-->
+                        <div class="flow__container">
+                            <p class="flow__number">01</p>
+                            <div class="flow__contents">
+                                <div class="ttl__contents">
+                                    <p class="icon__container">
+                                        <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon1.svg" ) ); ?>" alt="メールのアイコン" class="icon">
+                                    </p>
+                                    <p class="ttl">お問い合わせ</p>
+                                </div><!--/.ttl__contents-->
+                                <div class="txt__contents">
+                                    <p class="txt01"><a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="contact__link">お問い合わせフォーム</a>からお問い合わせください。<br>ご要望(ホームページを新しくしたい・リニューアルしたい、デザイン･コーディングのみ依頼したい、とりあえず一度相談してみたい...etc)をお問い合わせ内容に記載いただき送信ください。原則24時間以内に内容を確認させていただき、ご返信いたします。</p>
+                                </div>
+                            </div><!--/.flow__contents-->
+                        </div><!--/.flow__container-->
+                        <div class="flow__container">
+                            <p class="flow__number">02</p>
+                            <div class="flow__contents">
+                                <div class="ttl__contents">
+                                    <p class="icon__container">
+                                        <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon2.svg" ) ); ?>" alt="吹き出しのアイコン" class="icon">
+                                    </p>
+                                    <p class="ttl">打ち合わせ</p>
+                                </div><!--/.ttl__contents-->
+                                <div class="txt__contents">
+                                    <p class="txt01">ミーティングアプリ(Zoom/Google Meet)を使用したテレビ電話にて打ち合わせさせていただきます。お客様のご要望をお聞かせください。もちろんメールやslackでの打ち合わせも可能です。原則オンラインでの打ち合わせになりますが千葉県内、都内であれば日程を調整させていただき、直接打ち合わせも可能です。</p>
+                                </div>
+                            </div><!--/.flow__contents-->
+                        </div><!--/.flow__container-->
+                        <div class="flow__container">
+                            <p class="flow__number">03</p>
+                            <div class="flow__contents">
+                                <div class="ttl__contents">
+                                    <p class="icon__container icon__container--03">
+                                        <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon3.svg" ) ); ?>" alt="テキストのアイコン" class="icon">
+                                    </p>
+                                    <p class="ttl">お見積り書･納品スケジュール作成</p>
+                                </div><!--/.ttl__contents-->
+                                <div class="txt__contents">
+                                    <p class="txt01">お伺いしたご要望をまとめ、お見積り書と納品までのスケジュールをまとめてメールにて送信いたします。内容をご確認いただき、ご承諾いただけましたら契約成立とさせて頂き制作に着手します。</p>
+                                </div>
+                            </div><!--/.flow__contents-->
+                        </div><!--/.flow__container-->
+                        <div class="flow__container">
+                            <p class="flow__number">04</p>
+                            <div class="flow__contents">
+                                <div class="ttl__contents">
+                                    <p class="icon__container icon__container--04">
+                                        <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon4.svg" ) ); ?>" alt="パレット" class="icon">
+                                    </p>
+                                    <p class="ttl">デザイン作成</p>
+                                </div><!--/.ttl__contents-->
+                                <div class="txt__contents">
+                                    <p class="txt01">お客様から伺ったご要望を基に、トップページデザインを作成します。出来るかぎり、どんなイメージにしたいか、色合いなどをヒアリングさせていただき相違がないようデザインしていきます。作成後、ご確認いただきます。(イメージと違ったなどありましたら再度作成し直します)</p>
+                                </div>
+                            </div><!--/.flow__contents-->
+                        </div><!--/.flow__container-->
+                        <div class="flow__container">
+                            <p class="flow__number">05</p>
+                            <div class="flow__contents">
+                                <div class="ttl__contents">
+                                    <p class="icon__container">
+                                        <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon5.svg" ) ); ?>" alt="PCのアイコン" class="icon">
+                                    </p>
+                                    <p class="ttl">コーディング･サイト構築･テスト</p>
+                                </div><!--/.ttl__contents-->
+                                <div class="txt__contents">
+                                    <p class="txt01">デザイン確定後、WEBサイトに表示されるようコーディング･プログラミング作業を進め、サイトを構築いたします。完成後、テスト用にパスワードを設定して仮公開します。テストをして、お客さまにもご確認いただき細かい修正をいたします。       </p>
+                                </div>
+                            </div><!--/.flow__flow__contents-->
+                        </div><!--/.flow__contents-->
+                        <div class="flow__container">
+                            <p class="flow__number">06</p>
+                            <div class="flow__contents">
+                                <div class="ttl__contents">
+                                    <p class="icon__container">
+                                        <img src="<?php echo esc_url( get_theme_file_uri( "img/popup-icon6.svg" ) ); ?>" alt="目的地のアイコン" class="icon">
+                                    </p>
+                                    <p class="ttl">納品(本番へアップロード･公開)</p>
+                                </div><!--/.ttl__contents-->
+                                <div class="txt__contents">
+                                    <p class="txt01">テスト･修正後、本番サーバーへアップロードを行います。問題がないかチェックを行い、納品完了とさせていただきます。その後、問題が起きたなどトラブルがあれば対応いたします。(保守やページの追加、修正などは別途費用がかかりますのでご了承ください)</p>
+                                </div>
+                            </div><!--/.flow__flow__contents-->
+                        </div><!--/.flow__container-->
+                    </div><!--/.modal__content-->
+                </div><!--/.modal__container-->
+            </div><!--/.modal__overlay-->
         </div><!--/.container-fluid-->
     </section>
     <!---------------------profile------------------------>
     <section class="profile">
         <div class="container-fluid profile__cotainer">
             <div class="profile__image__container">
-                <img src="<?php echo esc_url( get_theme_file_uri( "img/profile1.png" ) ); ?>" alt="制作者の画像" class="img">
+                <img src="<?php echo esc_url( get_theme_file_uri( "img/profile1.jpg" ) ); ?>" alt="制作者の画像" class="img">
             </div>
             <div class="profile__detail">
                 <h2 class="section__ttl">
@@ -379,7 +351,7 @@
                     </p>
                     <p class="profile__txt01">ウェブデザイナー<br>長野県で生まれ育ち、現在千葉県在住。<br>自然がこよなく好き。<br>営業職退職後、WEB制作会社でデザイン、<br class="md__none">コーディング、フロントエンド業務を担当<br>お客様一人ひとりにあったホームページを<br class="md__none">提案しています。</p>
                     <div class="sp__image__container">
-                        <img src="<?php echo esc_url( get_theme_file_uri( "img/profile1.png" ) ); ?>" alt="制作者の画像" class="img">
+                        <img src="<?php echo esc_url( get_theme_file_uri( "img/profile1.jpg" ) ); ?>" alt="制作者の画像" class="img">
                     </div>
                     <div class="profile__skill__container">
                         <p class="icon__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/icon_xd.svg" ) ); ?>" alt="adobe xdのアイコン" class="icon"></p>

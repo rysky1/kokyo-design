@@ -56,14 +56,15 @@
             <h2 class="profile__ttl">Profile</h2>
             <div class="profile__container">
                 <div class="img__container">
-                    <img src="<?php echo esc_url( get_theme_file_uri( "img/profile_img.png" ) ); ?>" alt="制作者" class="img">
+                    <img src="<?php echo esc_url( get_theme_file_uri( "img/profile_img.jpg" ) ); ?>" alt="制作者" class="img">
                 </div>
                 <div class="profile__contents">
+                    <p class="contents__txt01">関谷諒</p>
                     <p class="contents__txt01">1992年生まれ、長野県長野市出身<br><span>長野日本大学高等学校</span><span class="sp01">日本大学卒業</span></p>
                     <p class="contents__txt01">WEB制作･デザインに出会い、営業職を思い切って退職。デザイン･コーディングを本格的に学び始め、のめり込む。</p>
                     <p class="contents__txt01">千葉県内のWEB制作会社へフロントエンドとして転職<br>WEB制作･デザイン･CMS設計を担当</p>
                     <p class="contents__txt01">個人事業主としてWEB制作を受注開始</p>
-                    <p class="contents__txt02"><span class="sp02">趣味:</span><span>旅行(田舎育ちのためか自然環境に身を置きたくなる)<br>アウトドア(サーフィン･スノーボード)</span></p>
+                    <p class="contents__txt02"><span class="sp02">趣味:</span><span>旅行/アウトドア(サーフィン･スノーボード)</span></p>
                     <p class="contents__txt02">
                         <span class="sp02">好きな物:</span>
                         <span>自然 / ポテトチップス / コーヒー</span>

@@ -23,47 +23,47 @@
         </a>
     </header>
     <!---------------------popup-menu------------------------>
-    <div data-micromodal-trigger="modal-1" role="button" class="popup__nav__btn"><img src="<?php echo esc_url( get_theme_file_uri( "img/wave_bnt.svg" ) ); ?>" alt="波線" class="icon__wave"></div>
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-        <div class="modal__overlay popup__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container popup__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" data-micromodal-close>
-                <div class="modal__content popup__contents" id="modal-1-content" data-micromodal-close>
+    <div id="nav__btn" class="popup__nav__btn"><img src="<?php echo esc_url( get_theme_file_uri( "img/wave_bnt.svg" ) ); ?>" alt="波線" class="icon__wave"></div>
+    <div id="popup__nav" class="popup__modal">
+        <div class="popup__overlay">
+            <div class="popup__container">
+                <div class="popup__contents">
                     <h2 class="logo__container logo__container--header">
                         <a href="/" class="logo__link">
                             <img src="<?php echo esc_url( get_theme_file_uri( "img/logo-w.svg" ) ); ?>" alt="KOKYO DESIGN こきょうデザイン" class="logo">
                         </a>
                     </h2>
-                    <div class="modal__close popup__close" aria-label="Close modal" data-micromodal-close></div>
+                    <div id="close" class="popup__close"><img src="<?php echo esc_url( get_theme_file_uri( "img/close_btn-w.svg" ) ); ?>" alt="閉じるボタン" class="icon"></div>
                     <nav class="popup__nav">
-                        <ul>
+                        <ul id="list">
                             <li>
                                 <a href="/">
                                     <p class="link__ttl">Top</p>
                                     <p class="link__sub-ttl">トップ</p>
                                 </a>
                             </li>
-                            <li data-micromodal-close>
-                                <a data-micromodal-close href="<?php echo esc_url( home_url( '/#message' ) ); ?>">
-                                    <p data-micromodal-close class="link__ttl">Message</p>
-                                    <p data-micromodal-close class="link__sub-ttl">メッセージ</p>
+                            <li>
+                                <a href="/#message" data-micromodal-close aria-label="Close modal">
+                                    <p class="link__ttl">Message</p>
+                                    <p class="link__sub-ttl">メッセージ</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/#service' ) ); ?>" data-micromodal-close>
-                                    <p class="link__ttl" data-micromodal-close>Survice</p>
-                                    <p class="link__sub-ttl" data-micromodal-close>サービス</p>
+                                <a href="<?php echo esc_url( home_url( '/#service' ) ); ?>">
+                                    <p class="link__ttl">Survice</p>
+                                    <p class="link__sub-ttl">サービス</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/#works' ) ); ?>" data-micromodal-close>
-                                    <p class="link__ttl" data-micromodal-close>Works</p>
-                                    <p class="link__sub-ttl" data-micromodal-close>実績</p>
+                                <a href="<?php echo esc_url( home_url( '/#works' ) ); ?>">
+                                    <p class="link__ttl">Works</p>
+                                    <p class="link__sub-ttl">実績</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/#price' ) ); ?>" data-micromodal-close>
-                                    <p class="link__ttl" data-micromodal-close>Price</p>
-                                    <p class="link__sub-ttl" data-micromodal-close>価格</p>
+                                <a href="<?php echo esc_url( home_url( '/#price' ) ); ?>">
+                                    <p class="link__ttl">Price</p>
+                                    <p class="link__sub-ttl">価格</p>
                                 </a>
                             </li>
                             <li>
@@ -80,7 +80,7 @@
                             </li>
                         </ul>
                     </nav><!--/.popup__nav-->
-                </div><!--/.modal__content-->
-            </div><!--/.modal__container-->
-        </div><!--/.modal__overlay-->
-    </div><!--/.modal micromodal-slide-->
+                </div><!--/.popup__content-->
+            </div><!--/.popup__container-->
+        </div><!--/.popup__overlay-->
+    </div><!--/.popup__modal-->

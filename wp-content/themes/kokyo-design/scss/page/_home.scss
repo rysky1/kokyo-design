@@ -12,7 +12,7 @@
     right: 30px;
     filter: drop-shadow(0 0 7px $color__shadow015);
     transition: .2s;
-    z-index: 1000;
+    z-index: 100;
     @include sm{
         width: 45px;
         height: 45px;
@@ -31,13 +31,17 @@
         background-color: #6ea7dc;
     }
 }
-/*--------micromodal---------*/
-.popup__overlay{
+/*--------popup nav---------*/
+.popup__modal{
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 150vw;
+    width: 100%;
+    height: 100vh;
+    transition: ease-out 0.75s;
+    z-index: 110;
+}
+.popup__overlay{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,22 +49,21 @@
 .popup__container{
     background-color: rgba( 3, 30, 68,0.95);
     width: 100%;
-    max-height: 100vh;
-    height: 100%;
+    height: 100vh;
+    overflow-y: auto;
     padding-top: 70px;
     padding-bottom: 70px;
-    overflow-y: auto;
     box-sizing: border-box;
     @include sm{
         padding-top: 35px;
         padding-bottom: 35px;
-        height: 100vh;
     }
 }
 .popup__contents{
     position: relative;
     max-width: 1200px;
     width: 100%;
+    height: 100%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -68,29 +71,36 @@
     .logo__container{
         .logo__link{
             margin: 0 auto;
+            max-width: 110px;
         }
     }
     .popup__close{
+        visibility: hidden;
         position: fixed;
-        top: 85px;
-        right: 40px;
+        top: 40px;
+        right: 35px;
         width: 45px;
         height: 45px;
-        background-image: url(../img/close_btn-w.svg);
-        background-color: transparent;
         cursor: pointer;
-        transition: .3s;
+        z-index: 120;
         @include sm{
             width: 35px;
             height: 35px;
             background-size: cover;
-            top: 50px;
             right: 15px;
         }
+        .icon{
+            top: 35px;
+            width: 100%;
+            height: 100%;
+            transition: ease-out 0.5s;
+        }
         &:hover{
-            opacity: 0.5;
-            @include sm{
-                opacity: 1;
+            .icon{
+                opacity: 0.5;
+                @include sm{
+                    opacity: 1;
+                }
             }
         }
     }
@@ -102,7 +112,7 @@
         li{
             padding-top: 30px;
             padding-bottom: 30px;
-            border-bottom: 1.5px solid #050f1b;
+            border-bottom: 1.5px solid rgba(0,0,0,0.4);
             box-shadow: 0 0.5px 0 rgba( 255, 255, 255, 0.3);
             @include sm{
                 padding-top: 15px;
@@ -113,8 +123,16 @@
                 box-shadow: none;
             }
             a{
+                margin-right: auto;
+                margin-left: auto;
                 padding-right: 10px;
                 padding-left: 10px;
+                @include lg{
+                    width: 50%;
+                }
+                @include sm{
+                    width: 65%;
+                }
                 .link__ttl{
                     font-size: 20px;
                     font-weight: 600;
@@ -144,103 +162,13 @@
         }
     }
 }
-//works__popup
-.works__popup{
-    .popup__overlay{
-        background-color: rgba(0, 0, 0, 0.65);
-    }
-    .popup__container{
-        padding-right: 15px;
-        padding-left: 15px;
-        max-width: 1200px;
-        background-color:#fff;
-    }
-    .popup__contents{
-        .contents__txt01{
-            line-height: 1.5;
-            text-align: center;
-            @include md{
-                text-align: left;
-            }
-        }
-        .contents__txt02{
-            line-height: 1.5;
-            font-size: 18px;
-            font-weight: 500;
-            @include md{
-                text-align: left;
-            }
-        }
-    }
-    .popup__close--works{
-        top: 70px;
-        right: 20px;
-        background-image: url(../img/close_btn-b.svg);
-    }
-    .product__ttl{
-        margin-bottom: 20px;
-        font-size: 30px;
-        font-size: unquote("clamp(20px, (0.3rem + 3vw), 30px)");
-        font-weight: 600;
-        color: #333;
-    }
-    .img__container{
-        margin-top: 30px;
-        margin-right: auto;
-        margin-bottom: 20px;
-        margin-left: auto;
-        width: 90%;
-        height: auto;
-        .img{
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .more__btn{
-        margin-top: 25px;
+.popup__modal.active{
+    left: 0;
+    .popup__close{
+        visibility: visible;
     }
 }
-/**************************\
-    Demo Animation Style
-\**************************/
-@keyframes mmfadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes mmfadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-@keyframes mmslideIn {
-    from { transform: translateY(15%); }
-    to { transform: translateY(0); }
-}
-@keyframes mmslideOut {
-    from { transform: translateY(0); }
-    to { transform: translateY(-10%); }
-}
-.micromodal-slide {
-    display: none;
-}
-.micromodal-slide.is-open {
-    display: block;
-}
-.micromodal-slide[aria-hidden="false"] .modal__overlay {
-    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-.micromodal-slide[aria-hidden="false"] .modal__container {
-    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-}
-.micromodal-slide[aria-hidden="true"] .modal__overlay {
-    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-.micromodal-slide[aria-hidden="true"] .modal__container {
-    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
-}
-.micromodal-slide .modal__container,
-.micromodal-slide .modal__overlay {
-    will-change: transform;
-}
+
 /*--------mv---------*/
 .mv{
     position: relative;
@@ -308,7 +236,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        background-color: #e5f3ff;
+        background-color: #dff0ff;
         @include sm{
             margin-top: 15px;
         }
@@ -320,7 +248,7 @@
             ;
             width: calc(50vw - 585px);
             height: 100%;
-            background-color: #e5f3ff;
+            background-color: #dff0ff;
         }
         .message__image__container{
             width: 400px;
@@ -694,6 +622,180 @@
         }
     }
 }
+
+/*---------WORKS POPUP----------*/
+//modaalカスタム
+.modaal-content-container{
+    padding: 0;
+}
+.modaal-close{
+    &:before,&:after{
+        top: 27px;
+        left: 10px;
+        height: 30px;
+        @include xl{
+            background-color: #a5a5a5;
+        }
+    }
+    @include sm{
+        top: 0;
+        right: 0;
+    }
+}
+.modaal-inner-wrapper{
+    @include sm{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+
+.works__popup{
+    display: none;
+}
+.works__popup__container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    width: 100%;
+    @include sm{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .head{
+        .sub__ttl{
+            font-size: 18px;
+            color: #5d5d5d;
+            text-align: center;
+            letter-spacing: 0.07rem;
+            @include sm{
+                font-size: 14px;
+            }
+        }
+        .ttl{
+            margin-top: 10px;
+            font-size: 40px;
+            font-size: unquote("clamp(20px, (0.3rem + 3vw), 40px)");
+            font-weight: 700;
+            color: #404040;
+            text-align: center;
+            @include sm{
+                margin-top: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+    .works__contents{
+        padding-top: 30px;
+        padding-right: 10%;
+        padding-bottom: 30px;
+        padding-left: 10%;
+        margin-top: 70px;
+        margin-top: unquote("clamp(23px, 3vw, 70px)");
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #dff0ff;
+        @include md{
+            flex-direction: column;
+        }
+        @include sm{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .contents__tb{
+            width: calc(50% - 45px);
+            @include lg{
+                width: calc(50% - 15px);
+            }
+            @include md{
+                width: 100%;
+            }
+            th{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                min-width: 100px;
+                font-weight: normal;
+                color: #5d5d5d;
+            }
+            td{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                line-height: 1.5;
+            }
+        }
+        .contents__txt01{
+            width: calc(50% - 45px);
+            @include lg{
+                width: calc(50% - 15px);
+            }
+            @include md{
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+    .web__img__container{
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 85%;
+        height: auto;
+        @include sm{
+            width: 100%;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .sp__img__wrapper{
+        position: relative;
+        padding-right: 100px;
+        padding-left: 100px;
+        margin-top: 100px;
+        margin-top: unquote("clamp(30px, 3vw, 100px)");
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include sm{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #dff0ff;
+            z-index: 10;
+        }
+        .img__container{
+            position: relative;
+            width: calc(33.3% - 30px);
+            height: auto;
+            z-index: 20;
+            @include sm{
+                width: calc(33.3% - 10px);
+            }
+            .img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .contact__txt01{
+        margin-top: 30px;
+    }
+    .more__btn{
+        margin-top: 20px;
+    }
+}
 /*--------price---------*/
 .price{
     padding-top: 120px;
@@ -820,164 +922,170 @@
             .more__btn{
                 margin-top: 50px;
             }
-            .popup__container--flow{
-                padding-right: 15px;
-                padding-left: 15px;
-                background-color: #fff;
-                @include xl{
-                    padding-top: 35px;
-                    padding-bottom: 35px;
-                    @include xs{
-                        padding-right: 10px;
-                        padding-left: 10px;
-                    }
+        }
+    }
+}
+
+// POPUP FLOW
+.flow__popup{
+    display: none;
+}
+.popup__container--flow{
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #fff;
+    @include xl{
+        padding-top: 35px;
+        padding-bottom: 35px;
+        @include sm{
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+.popup__close--flow{
+    background-image: url(../img/close_btn-b.svg);
+}
+.popup__contents--flow{
+    text-align: left;
+    .flow__ttl{
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 70px;
+        font-size: 25px;
+        font-weight: 600;
+        color: $color__main-font;
+        @include sm{
+            margin-bottom: 35px;
+            padding-left: 10px;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 4px;
+            height: 25px;
+            background-color: $color__main;
+            @include sm{
+                top: 0;
+                height: 100%;
+            }
+        }
+    }
+    .flow__container{
+        position: relative;
+        padding-bottom: 120px;
+        display: flex;
+        z-index: 10;
+        @include sm{
+            padding-bottom: 35px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 1px;
+            height: 100%;
+            background-color: #dedede;
+            z-index: -10;
+            @include sm{
+                left: 17.5px;
+            }
+        }
+        &:last-child{
+            &::before{
+                content: none;
+            }
+        }
+        .flow__number{
+            margin-right: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color__main;
+            min-width: 100px;
+            height: 100px;
+            font-size: 45px;
+            font-weight: bold;
+            color: #fff;
+            @include sm{
+                min-width: 35px;
+                height: 35px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+        .flow__contents{
+            position: relative;
+            .ttl__contents{
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                @include sm{
+                    margin-top: 3px;
+                    align-items: stretch;
                 }
-            }
-            .popup__close--flow{
-                background-image: url(../img/close_btn-b.svg);
-            }
-            .popup__contents--flow{
-                text-align: left;
-                .flow__ttl{
-                    position: relative;
-                    padding-left: 20px;
-                    margin-bottom: 70px;
-                    font-size: 25px;
-                    font-weight: 600;
-                    color: $color__main-font;
+                .icon__container{
+                    margin-right: 20px;
+                    max-width: 35px;
+                    height: 25px;
                     @include sm{
-                        margin-bottom: 35px;
-                        font-size: 23px;
-                        line-height: 1.5;
+                        margin-top: 7px;
                     }
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        top: 5px;
-                        left: 0;
-                        width: 4px;
-                        height: 25px;
-                        background-color: $color__main;
-                        @include sm{
-                            top: 0;
-                            height: 100%;
+                    &--03{
+                        height: 28px;
+                    }
+                    &--04{
+                        height: 33px;
+                    }
+                    @include sm{
+                        margin-right: 5px;
+                        max-width: 25px;
+                        height: 20px;
+                        &--03,&--04{
+                            height: 23px;
                         }
                     }
-                }
-                .flow__container{
-                    position: relative;
-                    padding-bottom: 120px;
-                    display: flex;
-                    z-index: 10;
-                    @include sm{
-                        padding-bottom: 35px;
-                    }
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 50px;
-                        width: 1px;
+                    .icon{
+                        width: 100%;
                         height: 100%;
-                        background-color: #dedede;
-                        z-index: -10;
-                        @include sm{
-                            left: 25px;
-                        }
                     }
-                    &:last-child{
-                        padding-bottom: 0;
-                        &::before{
-                            content: none;
-                        }
+                }
+                .ttl{
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #5d5d5d;
+                    @include sm{
+                        font-size: 18px;
+                        color: $color__main-font
                     }
-                    .flow__number{
-                        margin-right: 35px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: $color__main;
-                        min-width: 100px;
-                        height: 100px;
-                        font-size: 45px;
-                        font-weight: bold;
-                        color: #fff;
-                        @include sm{
-                            min-width: 50px;
-                            height: 50px;
-                            font-size: 25px;
-                            margin-right: 20px;
-                        }
+                }
+            }
+            .txt__contents{
+                .txt01{
+                    color: #5d5d5d;
+                }
+                .contact__link{
+                    display: inline-block;
+                    color: $color__main;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    @include sm{
+                        font-weight: 500;
                     }
-                    .flow__contents{
-                        position: relative;
-                        .ttl__contents{
-                            margin-bottom: 15px;
-                            display: flex;
-                            align-items: center;
-                            @include sm{
-                                margin-top: 11px;
-                                align-items: stretch;
-                            }
-                            .icon__container{
-                                margin-right: 20px;
-                                max-width: 35px;
-                                height: 25px;
-                                @include sm{
-                                    margin-top: 7px;
-                                }
-                                &--03{
-                                    height: 28px;
-                                }
-                                &--04{
-                                    height: 33px;
-                                }
-                                @include sm{
-                                    margin-right: 10px;
-                                    max-width: 25px;
-                                    height: 20px;
-                                    &--03,&--04{
-                                        height: 23px;
-                                    }
-                                }
-                                .icon{
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .ttl{
-                                font-size: 25px;
-                                font-weight: bold;
-                                color: #5d5d5d;
-                                @include sm{
-                                    font-size: 20px;
-                                    color: $color__main-font
-                                }
-                            }
-                        }
-                        .txt__contents{
-                            .txt01{
-                                color: #5d5d5d;
-                            }
-                            .contact__link{
-                                display: inline-block;
-                                color: $color__main;
-                                font-weight: bold;
-                                transition: 0.3s;
-                                @include sm{
-                                    font-weight: 500;
-                                }
-                                &:hover{
-                                    opacity: 0.6;
-                                }
-                            }
-                        }
+                    &:hover{
+                        opacity: 0.6;
                     }
                 }
             }
         }
     }
 }
+
 /*--------profile---------*/
 .profile{
     padding-top: 120px;

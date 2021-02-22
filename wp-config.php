@@ -32,7 +32,7 @@ define( 'DB_NAME', 'kokyo-design' );
 define( 'DB_USER', 'root' );
 
 /** MySQL データベースのパスワード */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', '' );
 
 /** MySQL のホスト名 */
 define( 'DB_HOST', 'localhost' );

@@ -1,12 +1,13 @@
 //div-link
-$(function(){
-    $('.div-link').on("click",function(){
-        location.href = $(this).attr('data-href');
+/*
+jQuery(function(){
+    jQuery('.div-link').on("click",function(){
+        location.href = jQuery(this).attr('data-href');
     });
 });
-
+*/
 //hiraku
-/*$(".offcanvas-right").hiraku({
+/*jQuery(".offcanvas-right").hiraku({
     btn:"#offcanvas-btn-right",
     direction:"right"
 });
@@ -42,42 +43,35 @@ var swiper = new Swiper('.swiper-container', {
     }
 });
 
+/*
 //スクロール
-$(function(){
-    $('a[href^="#"]').click(function(){
+jQuery(function(){
+    jQuery('a[href^="#"]').click(function(){
         var speed = 500;
-        var href = $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
+        var href = jQuery(this).attr("href");
+        var target = jQuery(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
-        $('body,html').animate({scrollTop:position},speed,'swing');
+        jQuery('body,html').animate({scrollTop:position},speed,'swing');
         return false;
     });
 });
+*/
 
-//popup
-function popupImage() {
-    var popup = document.getElementById('js-popup');
-    if(!popup) return;
+//popup nav
+jQuery(function(){
+    jQuery('#nav__btn').click(function(){
+        jQuery('#popup__nav').toggleClass('active');
+    });
+    jQuery('#close').click(function(){
+        jQuery('#popup__nav').toggleClass('active');
+    });
+});
+jQuery('#list a[href]').on('click',function(event){
+    jQuery('#nav__btn').trigger('click');
+});
 
-    var blackBg = document.getElementById('js-black-bg');
-    var closeBtn = document.getElementById('js-close-btn');
-    var showBtn = document.getElementById('js-show-popup');
-
-    closePopUp(blackBg);
-    closePopUp(closeBtn);
-    closePopUp(showBtn);
-    function closePopUp(elem) {
-        if(!elem) return;
-        elem.addEventListener('click', function() {
-            popup.classList.toggle('is-show');
-        });
-    }
-}
-popupImage();
-
-//micromodal
-MicroModal.init({
-    disableScroll: true,
-    disableFocus: true,
-    awaitCloseAnimation: true,
+//modaal
+jQuery('.modal__open').modaal({
+    background_scroll: 'false',
+    overlay_opacity: 0.9,
 });

@@ -51,6 +51,14 @@ function css_scripts() {
         '1.0'
     );
 
+        //modaal.cssの読み込み
+        wp_enqueue_style(
+            'modaal-style',
+            get_template_directory_uri() . '/css/modaal.css',
+            "",
+            '1.0'
+        );
+/*
     // WordPress提供のjquery.jsを読み込まない
     wp_deregister_script('jquery');
 
@@ -62,6 +70,7 @@ function css_scripts() {
         "2.2.4",
         false
     );
+*/
 /*
     //hiraku.jsの読み込み
     wp_enqueue_script(
@@ -76,23 +85,33 @@ function css_scripts() {
     wp_enqueue_script(
         'swiper-script',
         get_template_directory_uri() . '/js/swiper-bundle.min.js',
-        array( 'jquery' ),
+        array('jquery'),
         '1.0',
         true
     );
 
-    //micromodal.jsの読み込み
+    //modaal.jsの読み込み
     wp_enqueue_script(
-        'polyfill',
-        get_template_directory_uri() . '/js/polyfill.js',
-        array(),
+        'modaal-script',
+        get_template_directory_uri() . '/js/modaal.min.js',
+        array('jquery'),
         '1.0',
         true
     );
+
+    //polyfillの読み込み
+    wp_enqueue_script(
+        'polyfill',
+        get_template_directory_uri() . '/js/polyfill.js',
+        array('jquery'),
+        '1.0',
+        true
+    );
+
     wp_enqueue_script(
         'modal-script',
         get_template_directory_uri() . '/js/micromodal.min.js',
-        array(),
+        array('jquery'),
         '1.0',
         true
     );
@@ -102,7 +121,7 @@ function css_scripts() {
         'wave-script',
         get_template_directory_uri() . '/js/wave.js',
         array(),
-        '1.0',
+        '1.1',
         true
     );
 
@@ -111,19 +130,20 @@ function css_scripts() {
     wp_enqueue_script(
         'base-script',
         get_template_directory_uri() . '/js/javascript.js',
-        array( 'jquery' ),
+        array('jquery'),
         '1.0',
         true
     );
 }
 add_action( 'wp_enqueue_scripts' , 'css_scripts' );
 
-//style.cssの追加　child-styleにクエリ付与
+//style.cssの追加　クエリ付与
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/css/style.css?'. date("ymdHis", filemtime( get_stylesheet_directory() . '/css/style.css')), array() );
+    wp_enqueue_style( 'base-style', get_stylesheet_directory_uri() . '/css/style.css?'. date("ymdHis", filemtime( get_stylesheet_directory() . '/css/style.css')), array() );
 }
 
+/*
 //カスタム投稿タイプ
 add_action('init', 'create_post_type');
 function create_post_type(){
@@ -175,7 +195,7 @@ function add_post_taxonomy_restrict_filter() {
     }
 }
 add_action( 'restrict_manage_posts', 'add_post_taxonomy_restrict_filter' );
-
+*/
 
 
 //パンくず
