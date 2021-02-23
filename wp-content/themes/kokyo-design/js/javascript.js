@@ -43,21 +43,25 @@ var swiper = new Swiper('.swiper-container', {
     }
 });
 
+/**
+ * スムーススクロール
+ */
 /*
-//スクロール
 jQuery(function(){
-    jQuery('a[href^="#"]').click(function(){
+    jQuery('','a[href^="#"]:not(a.notscroll)').click(function(){
         var speed = 500;
-        var href = jQuery(this).attr("href");
+        var href= jQuery(this).attr("href");
         var target = jQuery(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        jQuery('body,html').animate({scrollTop:position},speed,'swing');
+        var position = target.offset().top + 100;
+        jQuery("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
     });
 });
 */
 
-//popup nav
+/**
+ * popup nav
+ */
 jQuery(function(){
     jQuery('#nav__btn').click(function(){
         jQuery('#popup__nav').toggleClass('active');

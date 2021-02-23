@@ -103,16 +103,16 @@
                         <p class="contents__ttl">コーポレートサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
                     </a><!--/.swiper-slide works__contents-->
-                    <div class="swiper-slide works__contents">
+                    <a href="#works2" class="swiper-slide works__contents modal__open">
                         <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product02.png" ) ); ?>" alt="実績PC画面"></p>
                         <p class="contents__ttl">ポートフォリオサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
-                    </div><!--/.swiper-slide works__contents-->
-                    <div class="swiper-slide works__contents" data-micromodal-trigger="modal-5" role="button">
+                    </a><!--/.swiper-slide works__contents-->
+                    <a href="#works3" class="swiper-slide works__contents modal__open">
                         <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product03.png" ) ); ?>" alt="実績PC画面"></p>
                         <p class="contents__ttl">コーポレートサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
-                    </div><!--/.swiper-slide works__contents-->
+                    </a><!--/.swiper-slide works__contents-->
                 </div><!--/.swiper-wrapper works__container-->
             </div><!--/.swiper-container works__wrapper-->
         </div><!--/.container-fluid-->
@@ -144,6 +144,74 @@
                 <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/brightlink_sp1.png" ) ); ?>" alt="制作物の画像" class="img"></p>
                 <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/brightlink_sp2.png" ) ); ?>" alt="制作物の画像" class="img"></p>
                 <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/brightlink_sp3.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+            </div><!--/.sp__img__wrapper-->
+            <p class="contact__txt01">制作物に興味のある方は下記からお問い合わせください。</p>
+            <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
+                <p class="btn__txt">お問い合わせへ</p>
+            </a>
+        </div><!--/.container-fluid-->
+    </section>
+    <!--POPUP WORKS2-->
+    <section id="works2" class="works__popup">
+        <div class="container-fluid works__popup__container">
+            <div class="head">
+                <p class="sub__ttl">Portfolio</p>
+                <h2 class="ttl">ポートフォリオ</h2>
+            </div>
+            <div class="works__contents">
+                <table class="contents__tb">
+                    <tr>
+                        <th>In charge</th>
+                        <td>Design / Cording / Wordpress</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>2020/11</td>
+                    </tr>
+                </table>
+                <p class="contents__txt01">ポートフォリオサイトを作成しました。風景画が好きで、素材を活かすためシンプルなテイストで作成しました。訪れてくれた方が迷わないサイトをコンセプトにして構築しました。</p>
+            </div>
+            <div class="web__img__container">
+                <img src="<?php echo esc_url( get_theme_file_uri( "img/works_kokyodesign.jpg" ) ); ?>" alt="制作物の画像" class="img">
+            </div>
+            <div class="sp__img__wrapper">
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/kokyodesign_sp1.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/kokyodesign_sp2.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/kokyodesign_sp3.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+            </div><!--/.sp__img__wrapper-->
+            <p class="contact__txt01">制作物に興味のある方は下記からお問い合わせください。</p>
+            <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
+                <p class="btn__txt">お問い合わせへ</p>
+            </a>
+        </div><!--/.container-fluid-->
+    </section>
+    <!--POPUP WORKS3-->
+    <section id="works3" class="works__popup">
+        <div class="container-fluid works__popup__container">
+            <div class="head">
+                <p class="sub__ttl">Website</p>
+                <h2 class="ttl">コーポレートサイト</h2>
+            </div>
+            <div class="works__contents">
+                <table class="contents__tb">
+                    <tr>
+                        <th>In charge</th>
+                        <td>Design / Cording / Wordpress</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>2021/1</td>
+                    </tr>
+                </table>
+                <p class="contents__txt01">コーポレートサイトの制作を行いました。イラストを使用したＰＯＰなデザインをベースに、分かりやすいサイト設計を心掛けました。</p>
+            </div>
+            <div class="web__img__container">
+                <img src="<?php echo esc_url( get_theme_file_uri( "img/works_proudup.jpg" ) ); ?>" alt="制作物の画像" class="img">
+            </div>
+            <div class="sp__img__wrapper">
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/proudup_sp1.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/proudup_sp2.png" ) ); ?>" alt="制作物の画像" class="img"></p>
+                <p class="img__container"><img src="<?php echo esc_url( get_theme_file_uri( "img/proudup_sp3.png" ) ); ?>" alt="制作物の画像" class="img"></p>
             </div><!--/.sp__img__wrapper-->
             <p class="contact__txt01">制作物に興味のある方は下記からお問い合わせください。</p>
             <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">

@@ -1270,20 +1270,30 @@ img {
   padding: 0;
 }
 
+.modaal-close {
+  top: 40px;
+  right: 35px;
+}
+@media (max-width: 575px) {
+  .modaal-close {
+    top: 15px;
+    right: 15px;
+  }
+}
+.modaal-close:hover {
+  background-color: transparent;
+}
 .modaal-close:before, .modaal-close:after {
-  top: 27px;
-  left: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   height: 30px;
 }
 @media (max-width: 1199px) {
   .modaal-close:before, .modaal-close:after {
     background-color: #a5a5a5;
-  }
-}
-@media (max-width: 575px) {
-  .modaal-close {
-    top: 0;
-    right: 0;
   }
 }
 
@@ -1655,7 +1665,8 @@ img {
   position: relative;
   padding-left: 20px;
   margin-bottom: 70px;
-  font-size: 25px;
+  font-size: 33px;
+  font-size: clamp(20px, (0.3rem + 3vw), 33px);
   font-weight: 600;
   color: #333;
 }
@@ -1670,10 +1681,13 @@ img {
 .popup__contents--flow .flow__ttl::before {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 0;
+  bottom: 0;
   left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 4px;
-  height: 25px;
+  height: 85%;
   background-color: #2E80CB;
 }
 @media (max-width: 575px) {

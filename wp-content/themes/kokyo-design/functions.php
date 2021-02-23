@@ -99,23 +99,6 @@ function css_scripts() {
         true
     );
 
-    //polyfillの読み込み
-    wp_enqueue_script(
-        'polyfill',
-        get_template_directory_uri() . '/js/polyfill.js',
-        array('jquery'),
-        '1.0',
-        true
-    );
-
-    wp_enqueue_script(
-        'modal-script',
-        get_template_directory_uri() . '/js/micromodal.min.js',
-        array('jquery'),
-        '1.0',
-        true
-    );
-
     //wave.jsの読み込み
     wp_enqueue_script(
         'wave-script',
@@ -131,7 +114,7 @@ function css_scripts() {
         'base-script',
         get_template_directory_uri() . '/js/javascript.js',
         array('jquery'),
-        '1.0',
+        '1.1',
         true
     );
 }

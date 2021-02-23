@@ -629,17 +629,25 @@
     padding: 0;
 }
 .modaal-close{
+    top: 40px;
+    right: 35px;
+    @include sm{
+        top: 15px;
+        right: 15px;
+    }
+    &:hover{
+        background-color: transparent;
+    }
     &:before,&:after{
-        top: 27px;
-        left: 10px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
         height: 30px;
         @include xl{
             background-color: #a5a5a5;
         }
-    }
-    @include sm{
-        top: 0;
-        right: 0;
     }
 }
 .modaal-inner-wrapper{
@@ -952,7 +960,8 @@
         position: relative;
         padding-left: 20px;
         margin-bottom: 70px;
-        font-size: 25px;
+        font-size: 33px;
+        font-size: unquote("clamp(20px, (0.3rem + 3vw), 33px)");
         font-weight: 600;
         color: $color__main-font;
         @include sm{
@@ -964,10 +973,13 @@
         &::before{
             content: "";
             position: absolute;
-            top: 5px;
+            top: 0;
+            bottom: 0;
             left: 0;
+            margin-top: auto;
+            margin-bottom: auto;
             width: 4px;
-            height: 25px;
+            height: 85%;
             background-color: $color__main;
             @include sm{
                 top: 0;

@@ -14,25 +14,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/#message' ) ); ?>">
+                    <a href="/#message">
                         <p class="link__ttl">Messege</p>
                         <p class="link__sub-ttl">メッセージ</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/#service' ) ); ?>">
+                    <a href="/#service">
                         <p class="link__ttl">Service</p>
                         <p class="link__sub-ttl">サービス</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/#works' ) ); ?>">
+                    <a href="/#works">
                         <p class="link__ttl">Works</p>
                         <p class="link__sub-ttl">実績</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/#price' ) ); ?>">
+                    <a href="/#price">
                         <p class="link__ttl">Price</p>
                         <p class="link__sub-ttl">価格</p>
                     </a>

@@ -43,25 +43,25 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/#message" data-micromodal-close aria-label="Close modal">
+                                <a class="notscroll" href="#message">
                                     <p class="link__ttl">Message</p>
                                     <p class="link__sub-ttl">メッセージ</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/#service' ) ); ?>">
+                                <a class="notscroll" href="#service">
                                     <p class="link__ttl">Survice</p>
                                     <p class="link__sub-ttl">サービス</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/#works' ) ); ?>">
+                                <a class="notscroll" href="#works">
                                     <p class="link__ttl">Works</p>
                                     <p class="link__sub-ttl">実績</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url( home_url( '/#price' ) ); ?>">
+                                <a class="notscroll" href="#price">
                                     <p class="link__ttl">Price</p>
                                     <p class="link__sub-ttl">価格</p>
                                 </a>
