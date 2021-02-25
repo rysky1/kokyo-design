@@ -2,7 +2,7 @@
     <!---------------------mv------------------------>
     <section class="mv">
         <canvas id="canvas_wave" width="2000" height="150" class="mv__wave"></canvas>
-        <video loop autoplay muted playsinline poster="<?php echo esc_url( get_theme_file_uri( "img/mv-bg.png" ) ); ?>" src="<?php echo esc_url( get_theme_file_uri( "img/mv__video.mov" ) ); ?>" class="mv__video"></video>
+        <video loop autoplay muted playsinline poster="<?php echo esc_url( get_theme_file_uri( "img/mv-bg.png" ) ); ?>" src="<?php echo esc_url( get_theme_file_uri( "img/mv__video.mp4" ) ); ?>" class="mv__video"></video>
         <h2 class="mv__ttl">人に寄り添う<br>デザインを</h2>
     </section><!--/.kv-->
     <!---------------------messege------------------------>
@@ -99,19 +99,24 @@
                 </div>
                 <div class="swiper-wrapper works__container">
                     <a href="#works1" class="swiper-slide works__contents modal__open">
-                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product01.png" ) ); ?>" alt="実績PC画面"></p>
+                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product01.png" ) ); ?>" alt="実績PC画面" class="img"></p>
                         <p class="contents__ttl">コーポレートサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
                     </a><!--/.swiper-slide works__contents-->
                     <a href="#works2" class="swiper-slide works__contents modal__open">
-                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product02.png" ) ); ?>" alt="実績PC画面"></p>
+                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product02.png" ) ); ?>" alt="実績PC画面" class="img"></p>
                         <p class="contents__ttl">ポートフォリオサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
                     </a><!--/.swiper-slide works__contents-->
                     <a href="#works3" class="swiper-slide works__contents modal__open">
-                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product03.png" ) ); ?>" alt="実績PC画面"></p>
+                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product03.png" ) ); ?>" alt="実績PC画面" class="img"></p>
                         <p class="contents__ttl">コーポレートサイト</p>
                         <p class="contents__txt02">Design / Cording / Wordpress</p>
+                    </a><!--/.swiper-slide works__contents-->
+                    <a href="#works4" class="swiper-slide works__contents modal__open">
+                        <p class="contents__image"><img src="<?php echo esc_url( get_theme_file_uri( "img/product_kawagoeseitaikan.jpg" ) ); ?>" alt="実績PC画面"></p>
+                        <p class="contents__ttl">DTPデザイン:チラシ</p>
+                        <p class="contents__txt02">Design</p>
                     </a><!--/.swiper-slide works__contents-->
                 </div><!--/.swiper-wrapper works__container-->
             </div><!--/.swiper-container works__wrapper-->
@@ -169,7 +174,7 @@
                         <td>2020/11</td>
                     </tr>
                 </table>
-                <p class="contents__txt01">ポートフォリオサイトを作成しました。風景画が好きで、素材を活かすためシンプルなテイストで作成しました。訪れてくれた方が迷わないサイトをコンセプトにして構築しました。</p>
+                <p class="contents__txt01">ポートフォリオサイトを作成しました。風景画が好きで、素材を活かすためシンプルなテイストで作成しました。訪れてくれた方が迷わないサイトをコンセプトにして構築しています。</p>
             </div>
             <div class="web__img__container">
                 <img src="<?php echo esc_url( get_theme_file_uri( "img/works_kokyodesign.jpg" ) ); ?>" alt="制作物の画像" class="img">
@@ -219,6 +224,35 @@
             </a>
         </div><!--/.container-fluid-->
     </section>
+    <!--POPUP WORKS4-->
+    <section id="works4" class="works__popup">
+        <div class="container-fluid works__popup__container">
+            <div class="head">
+                <p class="sub__ttl">Flyer</p>
+                <h2 class="ttl">DTP：チラシ</h2>
+            </div>
+            <div class="works__contents">
+                <table class="contents__tb">
+                    <tr>
+                        <th>In charge</th>
+                        <td>Design</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>2021/2</td>
+                    </tr>
+                </table>
+                <p class="contents__txt01">集客用のフライヤーデザインを作成しました。</p>
+            </div>
+            <div class="web__img__container">
+                <img src="<?php echo esc_url( get_theme_file_uri( "img/kawagoeseitaikan.jpg" ) ); ?>" alt="制作物の画像" class="img">
+            </div>
+            <p class="contact__txt01">制作物に興味のある方は下記からお問い合わせください。</p>
+            <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="more__btn">
+                <p class="btn__txt">お問い合わせへ</p>
+            </a>
+        </div><!--/.container-fluid-->
+    </section>
     <!---------------------price------------------------>
     <section id="price" class="price">
         <div class="container-fluid">
@@ -239,7 +273,7 @@
                                 <p class="list__price">&yen;70,000~</p>
                             </div><!--/.price__list-->
                             <div class="contents__list">
-                                <p class="list__ttl">CMS(Wordpress)構築</p>
+                                <p class="list__ttl">+CMS(Wordpress)構築</p>
                                 <p class="list__price">&yen;50,000~</p>
                             </div><!--/.price__list-->
                             <div class="contents__list">

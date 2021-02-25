@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190450524-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-190450524-1');
+    </script>
+    <!-- Google Analytics END -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2
@@ -14,7 +24,7 @@
     <header class="header">
         <h1 class="logo__container logo__container--header">
             <a href="/" class="logo__link">
-                <img src="<?php echo esc_url( get_theme_file_uri( "img/logo.svg" ) ); ?>" alt="KOKYO DESIGN こきょうデザイン" class="logo">
+                <img src="<?php echo esc_url( get_theme_file_uri( "img/logo.svg" ) ); ?>" alt="KOKYO DESIGN こきょうデザイン 千葉市 ホームページ 制作" class="logo">
             </a>
         </h1>
         <a href="<?php echo esc_url(get_permalink( 8 )); ?>" class="header__contact__btn">
@@ -43,25 +53,25 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="notscroll" href="#message">
+                                <a class="notscroll" href="/#message">
                                     <p class="link__ttl">Message</p>
                                     <p class="link__sub-ttl">メッセージ</p>
                                 </a>
                             </li>
                             <li>
-                                <a class="notscroll" href="#service">
+                                <a class="notscroll" href="/#service">
                                     <p class="link__ttl">Survice</p>
                                     <p class="link__sub-ttl">サービス</p>
                                 </a>
                             </li>
                             <li>
-                                <a class="notscroll" href="#works">
+                                <a class="notscroll" href="/#works">
                                     <p class="link__ttl">Works</p>
                                     <p class="link__sub-ttl">実績</p>
                                 </a>
                             </li>
                             <li>
-                                <a class="notscroll" href="#price">
+                                <a class="notscroll" href="/#price">
                                     <p class="link__ttl">Price</p>
                                     <p class="link__sub-ttl">価格</p>
                                 </a>

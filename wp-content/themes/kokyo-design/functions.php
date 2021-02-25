@@ -188,7 +188,7 @@ function breadcrumb_func(){
     $url = esc_url((is_ssl() ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . htmlspecialchars($_SERVER["REQUEST_URI"], ENT_QUOTES, 'UTF-8'));
     if(!is_home() && !is_admin()){
         $str.= '<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
-        $str.= '<a href="'.home_url().'" itemprop="item"><span class="home__btn" itemprop="name">'.'HOME'.'</span></a><meta itemprop="position" content="1" /></li>';
+        $str.= '<a href="'.home_url().'" itemprop="item"><span class="home__btn" itemprop="name">'.'Home'.'</span></a><meta itemprop="position" content="1" /></li>';
         if( is_post_type_archive() ){
             $str.= '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="'.$url.'" itemprop="item"><span itemprop="name">'.esc_html(get_post_type_object(get_post_type())->label ).'</span></a><meta itemprop="position" content="2" /></li>';
         } elseif(is_tax()){
