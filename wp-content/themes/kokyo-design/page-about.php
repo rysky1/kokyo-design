@@ -36,7 +36,7 @@
                     </tbody>
                     <tbody class="table__body">
                         <th class="table__head">連絡先</th>
-                        <td class="table__date">下記フォームからお問い合わせください  / <a href="mailto:info@kokyo-design.co.jp" class="mail__link">mail:info@kokyo-design.co.jp</a></td>
+                        <td class="table__date">下記フォームからお問い合わせください</td>
                     </tbody>
                     <tbody class="table__body">
                         <th class="table__head">定休日</th>
