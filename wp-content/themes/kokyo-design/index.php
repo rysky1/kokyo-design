@@ -451,7 +451,7 @@
                         <span class="name__01">Ryo Sekiya</span>
                         <span class="name__02">せきや りょう</span>
                     </p>
-                    <p class="profile__txt01">ウェブデザイナー<br>長野県で生まれ育ち、現在千葉県在住。<br>自然がこよなく好き。<br>営業職退職後、WEB制作会社でデザイン、<br class="md__none">コーディング、フロントエンド業務を担当<br>お客様一人ひとりにあったホームページを<br class="md__none">提案しています。</p>
+                    <p class="profile__txt01">ウェブデザイナー<br>長野県で生まれ育ち、現在千葉県在住。<br>自然がこよなく好き。<br>営業職退職後、WEB制作会社でデザイン、<br class="md__none">コーディング、フロントエンド業務を担当<br class="md__none">お客様一人ひとりにあったホームページを<br class="md__none">提案しています。</p>
                     <div class="sp__image__container">
                         <img src="<?php echo esc_url( get_theme_file_uri( "img/profile1.jpg" ) ); ?>" alt="制作者の画像" class="img">
                     </div>
